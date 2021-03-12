@@ -64,3 +64,12 @@ If you have any feedback or questions, head over to my GitHub contact details an
 * As a user, I want to be able to restart the game once is over.
 * As a user, I want to be able to save my score.
 * As a user, I would like to compare my score whit other players.
+
+<a></a>
+
+### **Site owners Goals**
+* To have an appealing website where users want to go to Test their Fortnite knowledge.
+* For the users to have fun while playing my game.
+
+
+[Back to Top](#table-of-contents)
