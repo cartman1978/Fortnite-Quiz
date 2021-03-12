@@ -108,3 +108,7 @@ For the title of my game, I have used the font [Source Code Pro](https://fonts.g
 
 <a></a>
 #### Colors
+
+I have decide to use some colors that reminds Fortnite game .
+
+![Color Palette](wireframes/fortnite-color.png)
