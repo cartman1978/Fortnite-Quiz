@@ -93,3 +93,18 @@ If you have any feedback or questions, head over to my GitHub contact details an
 * Show a personalised message with funny iamge after completing the game 
 
 [Back to Top](#table-of-contents)
+
+<a></a>
+### **Design Choices**
+
+I have used [Coolors](https://coolors.co/ "Coolors.co") to create a color scheme that matches the atmosphere of playing Fortnite Game.
+The design choosed is simple but I would like to create cool and animated background.
+
+<a></a>
+#### Fonts
+I have visited [Google Fonts](https://fonts.google.com/ "Google Fonts") to explore the various options.
+For the title of my game, I have used the font [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro?preview.text_type=custom). 
+
+
+<a></a>
+#### Colors
