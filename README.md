@@ -73,3 +73,13 @@ If you have any feedback or questions, head over to my GitHub contact details an
 
 
 [Back to Top](#table-of-contents)
+
+<a></a>
+### **User Requirements and Expectations**
+<a></a>
+#### Requirements
+* Easy to navigate 
+* Appealing homepage
+* Easy way to understand game rules and start the game
+* Validate the correct answer
+* Store the score of the user playing
