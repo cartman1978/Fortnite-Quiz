@@ -83,3 +83,13 @@ If you have any feedback or questions, head over to my GitHub contact details an
 * Easy way to understand game rules and start the game
 * Validate the correct answer
 * Store the score of the user playing
+
+<a></a>
+#### Expectations
+* Show which number of the questions user is in
+* To let the user know if their answer was correct or wrong
+* Show correct answer when answered incorrectly
+* To show the final result after playing
+* Show a personalised message with funny iamge after completing the game 
+
+[Back to Top](#table-of-contents)
