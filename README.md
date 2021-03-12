@@ -49,3 +49,18 @@ If you have any feedback or questions, head over to my GitHub contact details an
 * During the game track the number of questions 
 * Visual appealing website
 
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+### **User Stories**
+* As a user, I would like to know the rules of the game before playing.
+* As a user, I would like to know how many time left I have to answer the question.
+* As a user, I would like to know the correct answer when answered incorrectly.
+* As a user, I expect that the game has a nice visually appealing lay out to be in line with the game.
+* As a user, I expect a variety of questions so no questions get repeated.
+* As a user, I would like to learn new things about Fortnite while I'm playing the game.
+* As a user, I want to know where I am in the game, to know how many questions I still have left.
+* As a user, I want to be able to restart the game once is over.
+* As a user, I want to be able to save my score.
+* As a user, I would like to compare my score whit other players.
