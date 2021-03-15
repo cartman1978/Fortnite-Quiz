@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Source Code Pro', monospace;
-    height: 100vh;
+    height: 130vh;
 } 
 
 .start_btn,
@@ -57,4 +57,23 @@
     padding: 0 2.5rem;
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+.info_container .info_title .info {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+.info_container .info_title .info span {
+    font-weight: 700;
+    color: #E05A5C;
+}
+
+.info_container .buttons {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2.3rem;
+    border-top: 1px solid lightblue;
 }
