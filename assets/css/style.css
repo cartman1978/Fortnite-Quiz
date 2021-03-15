@@ -84,3 +84,17 @@
     padding: 0 2.3rem;
     border-top: 1px solid lightblue;
 }
+
+.info_container .buttons button {
+    margin: 0 5px;
+    height: 2.6rem;
+    width: 7rem;
+    outline: none;
+    border: 1px solid #E05A5C;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
