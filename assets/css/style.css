@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;700&display=swap');
+
+:root {
+    font-size: 62.5%;
+}
+
+ body {
+    background-image: url(../images/videogame-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Code Pro', monospace;
+    height: 100vh;
+} 
+
+.start_btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 #D12D6F,
+                0 6px 20px 0 #D12D6F;
+    transition: all 0.3s ease;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+}
+
+.start_btn button {
+    border: none;
+    border-radius: 1rem;
+     font-weight: 700;
+    color: #E05A5C;
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+}
