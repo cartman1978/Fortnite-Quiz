@@ -1,10 +1,10 @@
-# Fortnite-Quiz
+# Video Game Quizzes
 
 ## **Goal for this project** 
 
-Welcome to Fortnite Quiz !
+Welcome to Video Game Quizzes !
 
-Are you a Fortnite fan and you looking to test your knowledge about this addictive game?
+Are you a videogamer and you looking to test your ut your gaming knowledge to the test ?
 So let's get started and have fun!
 
 Thank you for visiting my project!
