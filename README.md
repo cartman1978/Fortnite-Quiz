@@ -59,7 +59,7 @@ If you have any feedback or questions, head over to my GitHub contact details an
 * As a user, I would like to know the correct answer when answered incorrectly.
 * As a user, I expect that the game has a nice visually appealing lay out to be in line with the game.
 * As a user, I expect a variety of questions so no questions get repeated.
-* As a user, I would like to learn new things about Fortnite while I'm playing the game.
+* As a user, I would like to learn new things about Videogames while I'm playing the game.
 * As a user, I want to know where I am in the game, to know how many questions I still have left.
 * As a user, I want to be able to restart the game once is over.
 * As a user, I want to be able to save my score.
@@ -68,7 +68,7 @@ If you have any feedback or questions, head over to my GitHub contact details an
 <a></a>
 
 ### **Site owners Goals**
-* To have an appealing website where users want to go to Test their Fortnite knowledge.
+* To have an appealing website where users want to go to Test their Videogame knowledge.
 * For the users to have fun while playing my game.
 
 
@@ -109,6 +109,6 @@ For the title of my game, I have used the font [Source Code Pro](https://fonts.g
 <a></a>
 #### Colors
 
-I have decide to use some colors that reminds Fortnite game .
+I have decide to use some colors that reminds the background image used.
 
-![Color Palette](wireframes/fortnite-color.png)
+![Color Palette](wireframes/videogame-color.png)
