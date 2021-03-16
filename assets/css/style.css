@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Source Code Pro', monospace;
+          
     
 }
 
@@ -13,13 +14,15 @@ html {
    font-size: 62.5%;
     width: 100%;
     overflow: auto;
+
 }
 
  body {
     
-    height: 120vh;
+    height: 100vh;
     width: 100%;
     overflow: auto;
+
 } 
 
 #bg-image {
@@ -320,4 +323,6 @@ footer .next_btn:hover {
    .quiz_box section .option_list {
        padding: 0;
    }
+
+   
 }
