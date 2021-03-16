@@ -183,3 +183,13 @@
     height: 3px;
     
 }
+
+.quiz_box section {
+    padding: 1.5rem 2rem 1.3rem 2rem;
+    color: #fff;
+}
+
+.quiz_box section .question_text {
+    font-size: 2rem;
+    font-weight: 700;
+}
