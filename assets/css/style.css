@@ -12,11 +12,19 @@
     
 }
 
+html {
+    font-size: 62.5%;
+    
+    overflow: auto;
+}
+
  body {
-    background-image: url(../images/videogame-bg.jpg);
+    background-image: url(../images/videogame-bgimg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-     height: 130vh;
+    height: 120vh;
+    width: 100%;
+     overflow: auto;
 } 
 
 .start_btn,
@@ -249,4 +257,19 @@ section .option_list .option:hover {
     color: rgb(255, 97, 6);
     background: rgb(236, 199, 177);
     border-color: rgb(255, 97, 6);
+}
+
+@media (max-width: 420px) {
+    .quiz_box {
+        width: 30rem;
+    }
+
+    .quiz_box header {
+        height: 7rem;
+    }
+
+
+   .quiz_box section .option_list {
+       padding: 0;
+   }
 }
