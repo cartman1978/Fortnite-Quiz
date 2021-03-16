@@ -228,16 +228,25 @@ section .option_list .option:hover {
     margin-bottom: 0px;
 }
 
-.option_list .option_list .icon {
+.option_list .option .icon {
     height: 1.6rem;
     width: 1.6rem;
     border: 2px solid transparent;
     border-radius: 50%;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    pointer-events: none;
 }
 
-.option_list .option_list .icon.tick {
-    color: yellow;
-    border-color: yellow;
+.option_list .option .icon.tick {
+    color: rgb(104, 170, 5);
+    border-color: rgb(104, 170, 5);
+    background-color: rgb(228, 240, 211);
+}
+
+.option_list .option .icon.cross {
+    color: rgb(255, 97, 6);
+    background: rgb(236, 199, 177);
+    border-color: rgb(255, 97, 6);
 }
