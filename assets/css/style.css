@@ -29,11 +29,10 @@ html {
    background-image: url(../images/videogame-bgimg.jpg);
    background-size: cover;
    background-repeat: no-repeat;
- 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
    
 }
 
@@ -171,7 +170,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 10rem;
+    width: 14rem;
     height: 3rem;
     background: #D12D6F;
     color: #fff;
@@ -268,6 +267,40 @@ section .option_list .option:hover {
     background: rgb(236, 199, 177);
     border-color: rgb(255, 97, 6);
 }
+
+.quiz_box footer {
+    height: 4rem;
+    width: 100%;
+    padding: 0 1.8rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz_box footer .total_question span {
+    display: flex;
+    padding: 0 0.5rem;
+}
+
+footer .total_question span p {
+    font-weight: 700;
+    padding: 0 0.5rem;
+}
+
+footer .next_btn {
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border: 1px solid #7A2D8D;
+    outline: none;
+    color: #D12D6F;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Media queries */
 
 @media (max-width: 420px) {
     .quiz_box {
