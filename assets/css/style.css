@@ -193,3 +193,25 @@
     font-size: 2rem;
     font-weight: 700;
 }
+
+.quiz_box section .option_list {
+    padding: 1.5rem;
+    display: block;
+}
+
+section .option_list .option {
+    background: #D12D6F;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+section .option_list .option:hover {
+    background: #7A2D8D;
+}
