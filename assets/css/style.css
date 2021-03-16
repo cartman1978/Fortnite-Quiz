@@ -13,19 +13,29 @@
 }
 
 html {
-    font-size: 62.5%;
-    
+   font-size: 62.5%;
+    width: 100%;
     overflow: auto;
 }
 
  body {
-    background-image: url(../images/videogame-bgimg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    
     height: 120vh;
     width: 100%;
-     overflow: auto;
+    overflow: auto;
 } 
+
+#bg-image {
+   background-image: url(../images/videogame-bgimg.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+ 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+   
+}
 
 .start_btn,
 .info_container,
