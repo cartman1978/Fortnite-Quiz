@@ -16,7 +16,8 @@
 } 
 
 .start_btn,
-.info_container {
+.info_container,
+.quiz_box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -115,4 +116,30 @@
 
 .buttons button.restart:hover {
     background: #D12D6F;
+}
+
+.quiz_box {
+    width: 40rem;
+    background: rgb(223, 136, 136);
+    border-radius: 1rem;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.quiz_box header {
+    position: relative;
+    z-index: 99;
+    height: 4.5rem;
+    padding: 0 1.8rem;
+    background: rgb(223, 136, 136);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px #7A2D8D;
+}
+
+.quiz_box header .title {
+    font-size: 1.3rem;
+    color: #fff;
 }
