@@ -1,18 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;700&display=swap');
 
-:root {
+/* :root {
     font-size: 62.5%;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+    
 }
 
  body {
     background-image: url(../images/videogame-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Source Code Pro', monospace;
-    height: 130vh;
+     height: 130vh;
 } 
 
 .start_btn,
@@ -122,7 +126,7 @@
     width: 40rem;
     background: #E05A5C;
     border-radius: 1rem;
-    pointer-events: none;
+    /* pointer-events: none; */
     transform: translate(-50%, -50%) scale(0.9);
 }
 
@@ -200,11 +204,12 @@
 }
 
 section .option_list .option {
-    background: #D12D6F;
+    background: #7A2D8D;
+    border: 1px solid #fff;
     border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     margin-bottom: 1rem;
-    font-size: 1.8rem;
+    font-size: 17px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -212,6 +217,27 @@ section .option_list .option {
     transition: all 0.3s ease;
 }
 
+
 section .option_list .option:hover {
-    background: #7A2D8D;
+    
+    background: #D12D6F;
+   
+}
+
+.option_list .option:last-child {
+    margin-bottom: 0px;
+}
+
+.option_list .option_list .icon {
+    height: 1.6rem;
+    width: 1.6rem;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.option_list .option_list .icon.tick {
+    color: yellow;
+    border-color: yellow;
 }
