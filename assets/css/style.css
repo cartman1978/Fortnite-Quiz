@@ -50,6 +50,13 @@ html {
     border-radius: 1rem;
 }
 
+.head_title {
+    position: absolute;
+    top: 30%;
+    color: #fff;
+    left: 15%;
+}
+
 .info_container.activeInfo {
     z-index: 5;
     opacity: 1;
