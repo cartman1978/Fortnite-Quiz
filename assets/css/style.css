@@ -50,13 +50,26 @@ html {
     border-radius: 1rem;
 }
 
+   /* Animation inspired by https://www.w3schools.com */
 
    .head_title  {
-   
+    position: relative;
     display: flex;
+    margin-top: 10rem;
     justify-content: center;
     color: #fff;
-    
+    animation-name: fall;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 100px;
+    }
 }
 
 .info_container.activeInfo {
