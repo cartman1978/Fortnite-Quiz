@@ -339,8 +339,8 @@ footer .next_btn:hover {
     text-align: center;
     align-items: center;
     flex-direction: column;
-     pointer-events: none;
-     opacity: 0;
+    pointer-events: none;
+    opacity: 0;
    transform: translate(-50%, -50%) scale(0.9);
 }
 
