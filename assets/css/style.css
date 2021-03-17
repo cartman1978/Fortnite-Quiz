@@ -50,11 +50,13 @@ html {
     border-radius: 1rem;
 }
 
-.head_title {
-    position: absolute;
-    top: 30%;
+
+   .head_title  {
+   
+    display: flex;
+    justify-content: center;
     color: #fff;
-    left: 15%;
+    
 }
 
 .info_container.activeInfo {
@@ -330,6 +332,17 @@ footer .next_btn:hover {
    .quiz_box section .option_list {
        padding: 0;
    }
+   
+
 
    
+}
+
+@media (max-width: 768px) {
+
+ 
+    
+
+
+
 }
