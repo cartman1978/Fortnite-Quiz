@@ -38,7 +38,8 @@ html {
 
 .start_btn,
 .info_container,
-.quiz_box {
+.quiz_box,
+.result_box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -328,6 +329,11 @@ footer .next_btn:hover {
     background: #D12D6F;
     color: #fff;
     border: 1px solid #7A2D8D;
+}
+
+.result_box {
+    background: #D12D6F;
+    color: #fff;
 }
 
 /* Media queries */
