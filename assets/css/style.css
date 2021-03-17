@@ -36,22 +36,7 @@ html {
    
 }
 
-.start_btn,
-.info_container,
-.quiz_box,
-.result_box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 4px 8px 0 #D12D6F,
-                0 6px 20px 0 #D12D6F;
-    transition: all 0.3s ease;
-    font-size: 1.6rem;
-    border-radius: 1rem;
-}
-
-   /* Animation inspired by https://www.w3schools.com */
+/* Animation inspired by https://www.w3schools.com */
 
    .head_title  {
     position: relative;
@@ -71,6 +56,21 @@ html {
     to {
         top: 100px;
     }
+} 
+
+.start_btn,
+.info_container,
+.quiz_box,
+.result_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 #D12D6F,
+                0 6px 20px 0 #D12D6F;
+    transition: all 0.3s ease;
+    font-size: 1.6rem;
+    border-radius: 1rem;
 }
 
 .info_container.activeInfo {
@@ -163,7 +163,7 @@ html {
 }
 
 .quiz_box {
-    opacity: 0;
+    display: none;
     width: 40rem;
     background: #E05A5C;
     border-radius: 1rem;
@@ -334,15 +334,14 @@ footer .next_btn:hover {
 .result_box {
     background: #7A2D8D;
     color: #fff;
-    width: 30rem;
+    padding: 1.5rem 2rem;
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-    opacity: 0;
-    pointer-events: none;
-
+     pointer-events: none;
+     opacity: 0;
+   transform: translate(-50%, -50%) scale(0.9);
 }
 
 .result_box .icon {
@@ -393,17 +392,6 @@ footer .next_btn:hover {
    .quiz_box section .option_list {
        padding: 0;
    }
-   
-
 
    
-}
-
-@media (max-width: 768px) {
-
- 
-    
-
-
-
 }
