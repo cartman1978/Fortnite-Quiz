@@ -153,3 +153,20 @@ header .timer .timer_sec {
      display: flex;
     user-select: none;
 }
+
+.questionText {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+#progressBar {
+    width: 100%;
+    height: 3rem;
+    border: 1px solid #fff;
+    margin-top: 2rem;
+}
+
+#progressFull {
+    height: 2.8rem;
+    background: #D12D6F;
+}
