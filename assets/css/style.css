@@ -75,7 +75,7 @@ html {
 }
 
 .info_container.activeInfo,
-.info_container.quizActive {
+.quiz_box.quizActive {
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
