@@ -59,7 +59,7 @@ html {
 } 
 
  header {
-     height: 70px;
+    height: 70px;
     padding: 0 30px;
     background: #E05A5C;
     color: #fff;
@@ -78,8 +78,8 @@ header .timer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 10rem;
-    height: 3rem;
+    width: 12rem;
+    height: 3.5rem;
     background: #D12D6F;
     border: 1px solid #7A2D8D;
     border-radius: 1rem;
@@ -134,7 +134,22 @@ header .timer .timer_sec {
     cursor: pointer;
     color: #fff;
 }
+.choices {
+    padding: 1.2rem;
+    width: 100%;
+    font-size: 1.2rem;
+}
 
+.total_question {
+    height: 4rem;
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-
-
+.total_que span {
+     display: flex;
+    user-select: none;
+}
