@@ -165,11 +165,11 @@ html {
 }
 
 .quiz_box {
-    display: none;
+    opacity: 0;
     width: 40rem;
     background: #E05A5C;
     border-radius: 1rem;
-    /* pointer-events: none; */
+    pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
 }
 
