@@ -59,7 +59,8 @@ html {
 } 
 
 .start_btn,
-.info_container{
+.info_container,
+.quiz_box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -69,7 +70,8 @@ html {
     transition: all 0.3s ease; 
 }
 
-.info_container.activeInfo {
+.info_container.activeInfo,
+.quiz_box.quizActive {
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
