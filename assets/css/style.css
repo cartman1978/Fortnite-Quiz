@@ -19,7 +19,7 @@ html {
 
  body {
     
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     overflow: auto;
 
@@ -91,7 +91,7 @@ html {
 }
 
 .info_container {
-    width: 540px;
+    width: 30rem;
     background: #fff;
     border-radius: 1rem;
     opacity: 0;
