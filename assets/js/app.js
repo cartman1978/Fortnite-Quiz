@@ -5,6 +5,11 @@ const info_container = document.querySelector('.info_container');
 const quit_btn = info_container.querySelector('.buttons .quit');
 const continue_btn = info_container.querySelector('.buttons .restart');
 const quiz_box = document.querySelector('.quiz_box');
+const question = document.querySelector('#question');
+const choices =Array.from(document.querySelectorAll('.choices'));
+
+console.log(choices);
+
 
 // If start button is clicked
 start_btn.onclick = () => {
