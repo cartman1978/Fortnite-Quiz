@@ -5,8 +5,11 @@ const info_container = document.querySelector('.info_container');
 const quit_btn = info_container.querySelector('.buttons .quit');
 const continue_btn = info_container.querySelector('.buttons .restart');
 const quiz_box = document.querySelector('.quiz_box');
+const end_box = document.querySelector('.end_box');
+const endMessage = document.querySelector('.endMessage');
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choices'));
+const finalScore = document.querySelector('#finalScore');
 
 let currentQuestion = {};
 let gettingAnswer = false;
@@ -33,6 +36,7 @@ quit_btn.onclick = () => {
 continue_btn.onclick = () => {
     info_container.classList.remove("activeInfo");
     quiz_box.classList.add("quizActive");
+    end_box.classList.remove("quizActive");
 }
 
 let questions = [
@@ -105,3 +109,24 @@ choices.forEach(choice => {
 });
 
 startGame()
+
+// Function to call when there are no question left
+// Diplay message depending on the score get by the user
+
+endGame = () => {
+    const totalScore = maxQuestions * bonusCorrectAnswer;
+    quiz_box.classList.add('hideActive');
+    end_box.classList.remove('hideActive');
+    end_box.innerText = score + " / " + totalScore;
+    if (score === (maxQuestions * bonusCorrectAnswer)) {
+        endMessage.innerText = "Wow this is what I call perfection!";
+    } else if(score >= ((maxQuestions / 5 * 4 ) * bonusCorrectAnswer)) {
+       endMessage.innerText = "Great! Almost a perfect score!";
+    } else if(score > ((maxQuestions / 2) * bonusCorrectAnswer)) {
+        endMessage.innerText = "Well, you're above the average!";
+    } else if(score >= ((maxQuestions / 5) * bonusCorrectAnswer)) {
+        endMessage.innerText = "No bad, but you can do better!";
+    } else {
+        endMessage.innerText = "Ohh... you need a refresh!";
+    }
+};
