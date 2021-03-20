@@ -273,6 +273,11 @@ header .timer .timer_sec {
     margin-top: 1.5rem;
 }
 
+.questionTitle {
+    color: #fff;
+    font-weight: 700;
+}
+
 .total_question {
     height: 4rem;
     width: 100%;

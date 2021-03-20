@@ -10,6 +10,8 @@ const endMessage = document.querySelector('.endMessage');
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choices'));
 const finalScore = document.querySelector('#finalScore');
+const scoreInfo = document.querySelector('#score');
+const questionText = document.querySelector('.questionText');
 
 let currentQuestion = {};
 let gettingAnswer = false;
@@ -72,6 +74,7 @@ let questions = [
 startGame = () => {
     questionCounter = 0;
     score = 0;
+    scoreInfo.innerText = score;
     availableQuestions = [...questions];
     console.log(availableQuestions);
     getNextQuestion();
@@ -81,6 +84,7 @@ startGame = () => {
 // Function to get new questions 
 getNextQuestion = () => {
     questionCounter++;
+    questionText.innerText = `${questionCounter} / ${maxQuestions}`;
     const questionIndex = Math.floor(Math.random()*availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -123,6 +127,13 @@ choices.forEach(choice => {
 });
 
 startGame()
+
+// Incremeant score if answer is correct
+
+const scoreUp = num => {
+    score += num;
+    scoreInfo.innerText = score;
+}
 
 // Function to call when there are no question left
 // Diplay message depending on the score get by the user
