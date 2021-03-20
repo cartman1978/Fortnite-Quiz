@@ -9,7 +9,7 @@ const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choices'));
 
 let currentQuestion = {};
-let gettingAnswer = true;
+let gettingAnswer = false;
 let score = 0;
 let availableQuestions = [];
 
@@ -88,7 +88,19 @@ getNextQuestion = () => {
   
     //    Remove current question from available questions to avoid question repeatition 
     availableQuestions.splice(questionIndex, 1);
-    acceptAnswer = true;
-}
+    gettingAnswer = true;
+};
+
+//    Validate user selected answer 
+choices.forEach(choice => {
+   choice.addEventListener('click', event => {
+      if(!gettingAnswer) return;
+
+    gettingAnswer = false;
+    const choiceSelected = event.target;
+    const answerSelected = choiceSelected.dataset['number'];
+    getNextQuestion();
+   });
+});
 
 startGame()
