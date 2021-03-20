@@ -307,3 +307,7 @@ header .timer .timer_sec {
 .score_box {
     color: #fff;
 }
+
+.score_main_text {
+    margin: 1rem;
+}
