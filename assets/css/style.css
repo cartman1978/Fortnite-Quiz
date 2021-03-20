@@ -310,10 +310,12 @@ header .timer .timer_sec {
     height: 3rem;
     border: 1px solid #fff;
     margin-top: 2rem;
+    
 }
 
 #progressFull {
     height: 2.8rem;
+    width: 0%;
     background: #D12D6F;
 }
 

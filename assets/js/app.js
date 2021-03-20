@@ -12,8 +12,10 @@ const choices = Array.from(document.querySelectorAll('.choices'));
 const finalScore = document.querySelector('#finalScore');
 const scoreInfo = document.querySelector('#score');
 const questionText = document.querySelector('.questionText');
+const progressFull = document.querySelector('#progressFull');
 
 let currentQuestion = {};
+let questionCounter = 0;
 let gettingAnswer = false;
 let score = 0;
 let availableQuestions = [];
@@ -85,6 +87,9 @@ startGame = () => {
 getNextQuestion = () => {
     questionCounter++;
     questionText.innerText = `${questionCounter} / ${maxQuestions}`;
+
+    // update question progress bar
+    progressFull.style.width = `${(questionCounter / maxQuestions) * 100}px`;
     const questionIndex = Math.floor(Math.random()*availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
