@@ -13,6 +13,26 @@ let gettingAnswer = true;
 let score = 0;
 let availableQuestions = [];
 
+// If start button is clicked show info box
+start_btn.onclick = () => {
+    info_container.classList.add("activeInfo"); 
+
+    
+}
+
+// If quit button is clicked
+
+quit_btn.onclick = () => {
+    info_container.classList.remove("activeInfo");
+}
+
+// If continue btutton is clicked Show Quiz questions box
+
+continue_btn.onclick = () => {
+    info_container.classList.remove("activeInfo");
+    quiz_box.classList.add("quizActive");
+}
+
 let questions = [
   {
     "question": "Inside which HTML element do we put the JavaScript??",
@@ -48,29 +68,14 @@ startGame = () => {
     score = 0;
     availableQuestions = [...questions];
     console.log(availableQuestions);
-    
+    getNextQuestion();
+}
+
+getNextQuestion = () => {
+    questionCounter++;
+    const questionIndex = Math.floor(Math.random()*availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerText = currentQuestion.question;
 }
 
 startGame()
-
-
-// If start button is clicked show info box
-start_btn.onclick = () => {
-    info_container.classList.add("activeInfo"); 
-
-    
-}
-
-// If quit button is clicked
-
-quit_btn.onclick = () => {
-    info_container.classList.remove("activeInfo");
-}
-
-// If continue btutton is clicked Show Quiz questions box
-
-continue_btn.onclick = () => {
-    info_container.classList.remove("activeInfo");
-    quiz_box.classList.add("quizActive");
-}
-
