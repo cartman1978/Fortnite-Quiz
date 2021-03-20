@@ -12,6 +12,8 @@ let currentQuestion = {};
 let gettingAnswer = false;
 let score = 0;
 let availableQuestions = [];
+const bonusCorrectAnswer = 10;
+const maxQuestions = 3;
 
 // If start button is clicked show info box
 start_btn.onclick = () => {
@@ -60,8 +62,7 @@ let questions = [
   }
 ];
 
-const BONUS_ANSWER = 10;
-const MAX_QUESTIONS = 3;
+
 
 // Function to start the game
 startGame = () => {
