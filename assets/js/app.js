@@ -107,6 +107,9 @@ choices.forEach(choice => {
 
     if (answerSelected == currentQuestion.answer) {
         choiceSelected.classList.add('correct');
+        setTimeout( () => {
+          choiceSelected.classList.remove('correct');
+        }, 1500);
     }
 
 
