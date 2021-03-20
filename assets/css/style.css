@@ -255,6 +255,12 @@ header .timer .timer_sec {
     font-size: 1.2rem;
 }
 
+#question {
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
 .total_question {
     height: 4rem;
     width: 100%;

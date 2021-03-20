@@ -63,6 +63,7 @@ let questions = [
 const BONUS_ANSWER = 10;
 const MAX_QUESTIONS = 3;
 
+// Function to start the game
 startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -71,6 +72,8 @@ startGame = () => {
     getNextQuestion();
 }
 
+
+// Function to get new questions 
 getNextQuestion = () => {
     questionCounter++;
     const questionIndex = Math.floor(Math.random()*availableQuestions.length);
