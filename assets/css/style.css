@@ -79,7 +79,7 @@ html {
 }
 
 .hideActive {
-    display: none;
+    /* display: none; */
 }
 
 .start_btn button {
