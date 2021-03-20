@@ -83,10 +83,6 @@ html {
 }
 
 
-.incorrect {
-    background: red;
-}
-
 .start_btn button {
     font-size: 1.5rem;
     font-weight: 700;
@@ -259,7 +255,15 @@ header .timer .timer_sec {
 }
 
 .correct {
-    background: greenyellow;
+    background: rgb(195, 236, 133);
+    border-radius: 1rem;
+    width: 38.8rem;
+    margin-left: -1.2rem;
+    height: 3.8rem;
+}
+
+.incorrect {
+    background: rgb(245, 73, 73);
     border-radius: 1rem;
     width: 38.8rem;
     margin-left: -1.2rem;
