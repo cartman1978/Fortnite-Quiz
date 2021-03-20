@@ -82,6 +82,10 @@ html {
     /* display: none; */
 }
 
+.correct {
+    background: greenyellow;
+}
+
 .start_btn button {
     font-size: 1.5rem;
     font-weight: 700;

@@ -104,6 +104,12 @@ choices.forEach(choice => {
     gettingAnswer = false;
     const choiceSelected = event.target;
     const answerSelected = choiceSelected.dataset['number'];
+
+    if (answerSelected == currentQuestion.answer) {
+        choiceSelected.classList.add('correct');
+    }
+
+
     getNextQuestion();
    });
 });
