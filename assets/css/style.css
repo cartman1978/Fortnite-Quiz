@@ -86,6 +86,10 @@ html {
     background: greenyellow;
 }
 
+.incorrect {
+    background: red;
+}
+
 .start_btn button {
     font-size: 1.5rem;
     font-weight: 700;

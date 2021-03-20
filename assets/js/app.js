@@ -110,6 +110,11 @@ choices.forEach(choice => {
         setTimeout( () => {
           choiceSelected.classList.remove('correct');
         }, 1500);
+    } else {
+        choiceSelected.classList.add('incorrect');
+        setTimeout( ()=> {
+            choiceSelected.classList.remove('incorrect');
+        }, 1500);
     }
 
 
