@@ -84,6 +84,11 @@ getNextQuestion = () => {
        const number = choice.dataset["number"];
        choice.innerText = currentQuestion["choice" + number];
     });
+
+  
+    //    Remove current question from available questions to avoid question repeatition 
+    availableQuestions.splice(questionIndex, 1);
+    acceptAnswer = true;
 }
 
 startGame()
