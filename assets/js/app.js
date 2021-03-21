@@ -132,9 +132,15 @@ choices.forEach(choice => {
           getNextQuestion();
         }, 1500);
     } else {
+        const correctAnswerNum = currentQuestion.answer;
+        const correctAnswer = document.querySelector(`[data-number="${correctAnswerNum}"]`);
         choiceSelected.classList.add('incorrect');
+        setTimeout( () => {
+          correctAnswer.classList.add('correct');
+        }, 1000);
         setTimeout( ()=> {
             choiceSelected.classList.remove('incorrect');
+            correctAnswer.classList.remove('correct');
         }, 1500);
     }
 
