@@ -103,30 +103,33 @@ getNextQuestion = () => {
     //    Remove current question from available questions to avoid question repeatition 
     availableQuestions.splice(questionIndex, 1);
     gettingAnswer = true;
+    validateUserAnswer();
 };
 
  
 
 //    Validate user selected answer 
+//  if answer is correct, selected answer will highlight green
+//  if answer is incorrect, selected answer will highlight red
+const validateUserAnswer = () => {
 choices.forEach(choice => {
    choice.addEventListener('click', event => {
       if(!gettingAnswer) return;
 
     gettingAnswer = false;
     const choiceSelected = event.target;
-    const answerSelected = choiceSelected.dataset['number'];
-
+    const answerSelected = choiceSelected.dataset.number;
+    
 
  
     if (answerSelected == currentQuestion.answer) {
          
         choiceSelected.classList.add('correct');
        
-        
         scoreUp(bonusCorrectAnswer);
         setTimeout( () => {
           choiceSelected.classList.remove('correct');
-         
+          getNextQuestion();
         }, 1500);
     } else {
         choiceSelected.classList.add('incorrect');
@@ -139,6 +142,7 @@ choices.forEach(choice => {
     getNextQuestion();
    });
 });
+}
 
 startGame()
 

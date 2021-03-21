@@ -254,9 +254,6 @@ header .timer .timer_sec {
    transition: all 0.3s ease;
 }
 
-.fa-times {
-    background: aqua;
-}
 
 .correct {
     background: rgb(195, 236, 133);
@@ -264,6 +261,10 @@ header .timer .timer_sec {
     width: 38.8rem;
     margin-left: -1.2rem;
     height: 3.8rem;
+}
+
+.icon {
+    background-color: #fff;
 }
 
 .incorrect {
