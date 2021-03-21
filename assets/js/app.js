@@ -125,7 +125,7 @@ choices.forEach(choice => {
         scoreUp(bonusCorrectAnswer);
         setTimeout( () => {
           choiceSelected.classList.remove('correct');
-          choiceSelected.classList.removeChild(true);
+         
         }, 1500);
     } else {
         choiceSelected.classList.add('incorrect');
