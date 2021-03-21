@@ -254,6 +254,10 @@ header .timer .timer_sec {
    transition: all 0.3s ease;
 }
 
+.fa-times {
+    background: aqua;
+}
+
 .correct {
     background: rgb(195, 236, 133);
     border-radius: 1rem;

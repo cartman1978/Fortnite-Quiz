@@ -105,6 +105,8 @@ getNextQuestion = () => {
     gettingAnswer = true;
 };
 
+ 
+
 //    Validate user selected answer 
 choices.forEach(choice => {
    choice.addEventListener('click', event => {
@@ -114,11 +116,16 @@ choices.forEach(choice => {
     const choiceSelected = event.target;
     const answerSelected = choiceSelected.dataset['number'];
 
+
+ 
     if (answerSelected == currentQuestion.answer) {
+         
         choiceSelected.classList.add('correct');
+        
         scoreUp(bonusCorrectAnswer);
         setTimeout( () => {
           choiceSelected.classList.remove('correct');
+          choiceSelected.classList.removeChild(true);
         }, 1500);
     } else {
         choiceSelected.classList.add('incorrect');
