@@ -13,9 +13,7 @@ const finalScore = document.querySelector('#finalScore');
 const scoreInfo = document.querySelector('#score');
 const questionText = document.querySelector('.questionText');
 const progressFull = document.querySelector('#progressFull');
-const restart = document.querySelector('#restart');
-const game = document.querySelector('#game-section');
-const restartMessage = document.querySelector('#restart-message');
+
 
 let currentQuestion = {};
 let questionCounter = 0;
@@ -162,12 +160,6 @@ choices.forEach(choice => {
 
 startGame();
 
-// Restart functionality
-restart.addEventListener('click', () => {
-   game.classList.add('hidden');
-   restartMessage.style.display = 'inline-block';
-   restartConfirmation();
-});
 
 // Incremeant score if answer is correct
 
@@ -181,8 +173,8 @@ const scoreUp = num => {
 
 endGame = () => {
     const totalScore = maxQuestions * bonusCorrectAnswer;
-    quiz_box.classList.add('hideActive');
-    end_box.classList.remove('hideActive');
+    quiz_box.classList.add('hidden');
+    end_box.classList.remove('hidden');
     end_box.innerText = score + " / " + totalScore;
     if (score === (maxQuestions * bonusCorrectAnswer)) {
         endMessage.innerText = "Wow this is what I call perfection!";
@@ -196,3 +188,5 @@ endGame = () => {
         endMessage.innerText = "Ohh... you need a refresh!";
     }
 };
+
+
