@@ -13,7 +13,7 @@ const finalScore = document.querySelector('#finalScore');
 const scoreInfo = document.querySelector('#score');
 const questionText = document.querySelector('.questionText');
 const progressFull = document.querySelector('#progressFull');
-
+const gameSec = document.querySelector('#game-section');
 
 let currentQuestion = {};
 let questionCounter = 0;
@@ -81,6 +81,7 @@ startGame = () => {
     availableQuestions = [...questions];
     console.log(availableQuestions);
     getNextQuestion();
+    gameSec.classList.remove('hidden');
 }
 
 
@@ -173,7 +174,7 @@ const scoreUp = num => {
 
 endGame = () => {
     const totalScore = maxQuestions * bonusCorrectAnswer;
-    quiz_box.classList.add('hidden');
+    gameSec.classList.add('hidden');
     end_box.classList.remove('hidden');
     end_box.innerText = score + " / " + totalScore;
     if (score === (maxQuestions * bonusCorrectAnswer)) {
