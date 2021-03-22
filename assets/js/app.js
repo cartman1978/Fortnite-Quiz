@@ -20,7 +20,7 @@ let gettingAnswer = false;
 let score = 0;
 let availableQuestions = [];
 const bonusCorrectAnswer = 10;
-const maxQuestions = 3;
+const maxQuestions = 10;
 
 // If start button is clicked show info box
 start_btn.onclick = () => {
@@ -85,11 +85,18 @@ startGame = () => {
 
 // Function to get new questions 
 getNextQuestion = () => {
+    if (availableQuestions.length === 0) {
+        endGame();
+    } else {
+
+    
     questionCounter++;
     questionText.innerText = `${questionCounter} / ${maxQuestions}`;
+    // questionText.style.width = ``;
 
     // update question progress bar
-    progressFull.style.width = `${(questionCounter / maxQuestions) * 100}%`;
+    progressFull.innerText = `${(questionCounter / maxQuestions) * 100 - 10}%`;
+    progressFull.style.width = `${(questionCounter / maxQuestions) * 100 - 10}%`;
     const questionIndex = Math.floor(Math.random()*availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -104,6 +111,7 @@ getNextQuestion = () => {
     availableQuestions.splice(questionIndex, 1);
     gettingAnswer = true;
     validateUserAnswer();
+    }
 };
 
  
