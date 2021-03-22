@@ -5,7 +5,7 @@ const info_container = document.querySelector('.info_container');
 const quit_btn = info_container.querySelector('.buttons .quit');
 const continue_btn = info_container.querySelector('.buttons .restart');
 const quiz_box = document.querySelector('.quiz_box');
-const end_box = document.querySelector('.end_box');
+const end_box = document.querySelector('#endBox');
 const endMessage = document.querySelector('.endMessage');
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choices'));
@@ -13,6 +13,9 @@ const finalScore = document.querySelector('#finalScore');
 const scoreInfo = document.querySelector('#score');
 const questionText = document.querySelector('.questionText');
 const progressFull = document.querySelector('#progressFull');
+const restart = document.querySelector('#restart');
+const game = document.querySelector('#game-section');
+const restartMessage = document.querySelector('#restart-message');
 
 let currentQuestion = {};
 let questionCounter = 0;
@@ -157,7 +160,14 @@ choices.forEach(choice => {
 });
 }
 
-startGame()
+startGame();
+
+// Restart functionality
+restart.addEventListener('click', () => {
+   game.classList.add('hidden');
+   restartMessage.style.display = 'inline-block';
+   restartConfirmation();
+});
 
 // Incremeant score if answer is correct
 

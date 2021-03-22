@@ -14,8 +14,12 @@
     <div class="head_title text-center">
         <h1 class="text-center">Videogame Quizzes</h1>
     </div>
+
+       <div id="loader-container">
+            <div id="loader" class="hidden"></div>
+        </div>
     
-    <div class="start_btn">
+    <div class="start_btn" id="info_cont">
 
         <button>Start Quiz</button>
     </div>
@@ -43,15 +47,15 @@
 
     <!-- Quiz Box -->
    
-    <div class="quiz_box col-12 hideActive">
+    <div id="game-section" class="quiz_box col-12 hidden">
          <header>
             <div class="title">Videogame quizzes</div>
             <div class="timer">
                 <div class="time_text">Time Left</div>
                 <div class="timer_sec">15</div>
-            </div>
-            
+            </div>   
         </header>
+        
         <div class="time_line"></div>
         <div id="loader"></div>
        
@@ -59,7 +63,7 @@
         <div class="col-12">
             <div class="row p-3">
                 <div class="option_list col-12">
-                    <p class="choices" data-number="1"><i class="fas fa-check"></i></p>
+                    <p class="choices" data-number="1"></p>
                  </div>
                   <div class="option_list col-12">
                     <p class="choices" data-number="2"></p>
@@ -70,11 +74,9 @@
                   <div class="option_list col-12">
                     <p class="choices" data-number="4"></p>
                  </div>
+               
             </div>
         </div>
-
-   
-  
 
         <!-- Question Counter -->
 
@@ -94,13 +96,24 @@
          
         </div>
         </div>
-     
+        <a href="#info_cont" id="restart" class="buttons" aria-label="restart-game">Restart Game</a>
     </div>
     
          <!-- End game message -->
-        <div class="end_box col-12 hideActive">
+        <div id="endBox" class="end_box col-12">
             <p class="endMessage"></p>
             <p id="totalScore">Your Score is: <span id="finalScore"></span></p>
+        </div>
+
+        <!-- Restart game box -->
+        <div id="restart-box" class="restart">
+            <div id="restart-message">
+                Do you really want to restart the game?
+            </div>
+            <div class="button-options">
+               <a href="#info_cont" class="buttonRestart" id="yes" aria-label="restart-game">Yes</a>
+                <a href="#" class="buttonNorestart" id="no" aria-label="continue-playing">No</a>
+            </div>
         </div>
 
     

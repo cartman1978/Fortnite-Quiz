@@ -78,10 +78,9 @@ html {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.hideActive {
+.hidden {
     /* display: none; */
 }
-
 
 .start_btn button {
     font-size: 1.5rem;
@@ -253,6 +252,8 @@ header .timer .timer_sec {
    background: #D12D6F;
    transition: all 0.3s ease;
 }
+
+
 
 
 .correct {
