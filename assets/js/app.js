@@ -36,7 +36,7 @@ quit_btn.onclick = () => {
     info_container.classList.remove("activeInfo");
 }
 
-// If continue btutton is clicked Show Quiz questions box
+// If continue button is clicked Show Quiz questions box
 
 continue_btn.onclick = () => {
     info_container.classList.remove("activeInfo");
@@ -176,7 +176,9 @@ endGame = () => {
     const totalScore = maxQuestions * bonusCorrectAnswer;
     gameSec.classList.add('hidden');
     end_box.classList.remove('hidden');
+   
     end_box.innerText = score + " / " + totalScore;
+   
     if (score === (maxQuestions * bonusCorrectAnswer)) {
         endMessage.innerText = "Wow this is what I call perfection!";
     } else if(score >= ((maxQuestions / 5 * 4 ) * bonusCorrectAnswer)) {
