@@ -92,8 +92,7 @@ getNextQuestion = () => {
     
     questionCounter++;
     questionText.innerText = `${questionCounter} / ${maxQuestions}`;
-    // questionText.style.width = ``;
-
+    
     // update question progress bar
     progressFull.innerText = `${(questionCounter / maxQuestions) * 100 - 10}%`;
     progressFull.style.width = `${(questionCounter / maxQuestions) * 100 - 10}%`;
@@ -116,18 +115,17 @@ getNextQuestion = () => {
 
  
 
-//    Validate user selected answer 
+//   Validate user selected answer 
 //  if answer is correct, selected answer will highlight green
 //  if answer is incorrect, selected answer will highlight red
 const validateUserAnswer = () => {
 choices.forEach(choice => {
    choice.addEventListener('click', event => {
-      if(!gettingAnswer) return;
-
-    gettingAnswer = false;
+   
     const choiceSelected = event.target;
     const answerSelected = choiceSelected.dataset.number;
-    
+       if(!gettingAnswer) return;
+        gettingAnswer = false;
 
  
     if (answerSelected == currentQuestion.answer) {
@@ -149,6 +147,7 @@ choices.forEach(choice => {
         setTimeout( ()=> {
             choiceSelected.classList.remove('incorrect');
             correctAnswer.classList.remove('correct');
+            getNextQuestion();
         }, 1500);
     }
 
