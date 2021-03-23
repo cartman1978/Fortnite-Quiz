@@ -14,7 +14,7 @@ const finalScore = document.querySelector('#finalScore');
 const scoreInfo = document.querySelector('#score');
 const questionText = document.querySelector('.questionText');
 const progressFull = document.querySelector('#progressFull');
-const progressText =document.querySelector('#progressText');
+const progressText = document.querySelector('#progressText');
 const gameSec = document.querySelector('#game-section');
 
 const btnContainer = document.querySelector('.btn-container');
@@ -39,42 +39,42 @@ rules.addEventListener('click', () => {
 });
 
 //If Continue OK is clicked, remove info box and diplay buttons again
- continueBtn.addEventListener('click', () => {
+continueBtn.addEventListener('click', () => {
     info_container.style.display = "none";
-     btnContainer.classList.remove('hidden');
- });
+    btnContainer.classList.remove('hidden');
+});
 
 //  If Play Quiz button is clicjed, show 
- playGame.addEventListener('click', () => {
+playGame.addEventListener('click', () => {
     quiz_box.classList.remove('hidden');
- });
+});
 
 
 let questions = [
-  {
-    "question": "Inside which HTML element do we put the JavaScript??",
-    "choice1": "<script>",
-    "choice2": "<javascript>",
-    "choice3": "<js>",
-    "choice4": "<scripting>",
-    "answer": 1
-  },
-  {
-    "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
-    "choice1": "<script href='xxx.js'>",
-    "choice2": "<script name='xxx.js'>",
-    "choice3": "<script src='xxx.js'>",
-    "choice4": "<script file='xxx.js'>",
-    "answer": 3
-  },
-  {
-    "question": " How do you write 'Hello World' in an alert box?",
-    "choice1": "msgBox('Hello World');",
-    "choice2": "alertBox('Hello World');",
-    "choice3": "msg('Hello World');",
-    "choice4": "alert('Hello World');",
-    "answer": 4
-  }
+    {
+        "question": "Inside which HTML element do we put the JavaScript??",
+        "choice1": "<script>",
+        "choice2": "<javascript>",
+        "choice3": "<js>",
+        "choice4": "<scripting>",
+        "answer": 1
+    },
+    {
+        "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
+        "choice1": "<script href='xxx.js'>",
+        "choice2": "<script name='xxx.js'>",
+        "choice3": "<script src='xxx.js'>",
+        "choice4": "<script file='xxx.js'>",
+        "answer": 3
+    },
+    {
+        "question": " How do you write 'Hello World' in an alert box?",
+        "choice1": "msgBox('Hello World');",
+        "choice2": "alertBox('Hello World');",
+        "choice3": "msg('Hello World');",
+        "choice4": "alert('Hello World');",
+        "answer": 4
+    }
 ];
 
 
@@ -87,8 +87,8 @@ startGame = () => {
     availableQuestions = [...questions];
     console.log(availableQuestions);
     getNextQuestion();
-   quiz_box.classList.remove('hidden');
-   
+
+
 }
 
 
@@ -98,68 +98,68 @@ getNextQuestion = () => {
         endGame();
     } else {
 
-     const questionIndex = Math.floor(Math.random()*availableQuestions.length);
-     questionCounter++;
-    
-    // update question progress bar
-    progressText.innerText = `${(questionCounter / maxQuestions) * 100 - 10}%`;
-    progressFull.style.width = `${(questionCounter / maxQuestions) * 100 - 10}%`;
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
+        const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+        questionCounter++;
 
-    choices.forEach(choice => {
-       const number = choice.dataset.number;
-       choice.innerText = currentQuestion["choice" + number];
-    });
+        // update question progress bar
+        progressText.innerText = `${(questionCounter / maxQuestions) * 100 - 10}%`;
+        progressFull.style.width = `${(questionCounter / maxQuestions) * 100 - 10}%`;
+        currentQuestion = availableQuestions[questionIndex];
+        question.innerText = currentQuestion.question;
 
-  
-    //    Remove current question from available questions to avoid question repeatition 
-    availableQuestions.splice(questionIndex, 1);
-    gettingAnswer = true;
-    validateUserAnswer();
+        choices.forEach(choice => {
+            const number = choice.dataset.number;
+            choice.innerText = currentQuestion["choice" + number];
+        });
+
+
+        //    Remove current question from available questions to avoid question repeatition 
+        availableQuestions.splice(questionIndex, 1);
+        gettingAnswer = true;
+        validateUserAnswer();
     }
 };
 
- 
+
 
 //   Validate user selected answer 
 //  if answer is correct, selected answer will highlight green
 //  if answer is incorrect, selected answer will highlight red
 const validateUserAnswer = () => {
-choices.forEach(choice => {
-   choice.addEventListener('click', event => {
-   
-    const choiceSelected = event.target;
-    const answerSelected = choiceSelected.dataset.number;
-       if(!gettingAnswer) return;
-        gettingAnswer = false;
+    choices.forEach(choice => {
+        choice.addEventListener('click', event => {
 
- 
-    if (answerSelected == currentQuestion.answer) {
-         
-        choiceSelected.classList.add('correct');
-       
-        scoreUp(bonusCorrectAnswer);
-        setTimeout( () => {
-          choiceSelected.classList.remove('correct');
-          getNextQuestion();
-        }, 1500);
-    } else {
-        const correctAnswerNum = currentQuestion.answer;
-        const correctAnswer = document.querySelector(`[data-number="${correctAnswerNum}"]`);
-        choiceSelected.classList.add('incorrect');
-        setTimeout( () => {
-          correctAnswer.classList.add('correct');
-        }, 1000);
-        setTimeout( ()=> {
-            choiceSelected.classList.remove('incorrect');
-            correctAnswer.classList.remove('correct');
-            getNextQuestion();
-        }, 1500);
-    }
+            const choiceSelected = event.target;
+            const answerSelected = choiceSelected.dataset.number;
+            if (!gettingAnswer) return;
+            gettingAnswer = false;
 
-   });
-});
+
+            if (answerSelected == currentQuestion.answer) {
+
+                choiceSelected.classList.add('correct');
+
+                scoreUp(bonusCorrectAnswer);
+                setTimeout(() => {
+                    choiceSelected.classList.remove('correct');
+                    getNextQuestion();
+                }, 1500);
+            } else {
+                const correctAnswerNum = currentQuestion.answer;
+                const correctAnswer = document.querySelector(`[data-number="${correctAnswerNum}"]`);
+                choiceSelected.classList.add('incorrect');
+                setTimeout(() => {
+                    correctAnswer.classList.add('correct');
+                }, 1000);
+                setTimeout(() => {
+                    choiceSelected.classList.remove('incorrect');
+                    correctAnswer.classList.remove('correct');
+                    getNextQuestion();
+                }, 1500);
+            }
+
+        });
+    });
 };
 
 startGame();
@@ -180,14 +180,14 @@ endGame = () => {
     gameSec.classList.add('hidden');
     end_box.classList.remove('hidden');
     finalScore.innerText = score + " / " + totalScore;
-   
+
     if (score === (maxQuestions * bonusCorrectAnswer)) {
         endMessage.innerText = "Wow this is what I call perfection!";
-    } else if(score >= ((maxQuestions / 5 * 4 ) * bonusCorrectAnswer)) {
-       endMessage.innerText = "Great! Almost a perfect score!";
-    } else if(score > ((maxQuestions / 2) * bonusCorrectAnswer)) {
+    } else if (score >= ((maxQuestions / 5 * 4) * bonusCorrectAnswer)) {
+        endMessage.innerText = "Great! Almost a perfect score!";
+    } else if (score > ((maxQuestions / 2) * bonusCorrectAnswer)) {
         endMessage.innerText = "Well, you're above the average!";
-    } else if(score >= ((maxQuestions / 5) * bonusCorrectAnswer)) {
+    } else if (score >= ((maxQuestions / 5) * bonusCorrectAnswer)) {
         endMessage.innerText = "No bad, but you can do better!";
     } else {
         endMessage.innerText = "Ohh... you need a refresh!";
@@ -196,7 +196,7 @@ endGame = () => {
 
 
 playAgain.addEventListener('click', () => {
-   gameSec.classList.remove('hidden');
+    gameSec.classList.remove('hidden');
     end_box.classList.add('hidden');
-  
+
 });

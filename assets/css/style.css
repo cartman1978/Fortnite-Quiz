@@ -1,44 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;700&display=swap');
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Source Code Pro', monospace;
-          
-    
 }
 
 html {
-   font-size: 62.5%;
+    font-size: 62.5%;
     width: 100%;
     overflow: auto;
-
 }
 
- body {
-    
+body {
     height: 120vh;
     width: 100%;
     overflow: auto;
-
-} 
+}
 
 #bg-image {
-   background-image: url(../images/videogame-bgimg.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-   background-size: cover;
-   
+    background-image: url(../images/videogame-bgimg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /* Animation inspired by https://www.w3schools.com */
 
-   .head_title  {
+.head_title {
     position: relative;
     display: flex;
     margin-top: 10rem;
@@ -56,25 +48,20 @@ html {
     to {
         top: 100px;
     }
-} 
+}
 
-.start_btn,
-.info_container,
-.quiz_box{
+.start_btn, .info_container, .quiz_box {
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
-                0px 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: all 0.3s ease; 
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
 }
 
 .hidden {
-   display: none;
+    display: none;
 }
-
-
 
 .btn-container {
     text-align: center;
@@ -82,7 +69,7 @@ html {
 }
 
 #quit {
-   font-size: 1.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #D12D6F;
     padding: 2rem 2rem;
@@ -107,7 +94,6 @@ html {
     text-decoration: none;
 }
 
- 
 .info_container {
     width: 30rem;
     background: #fff;
@@ -127,11 +113,11 @@ html {
 }
 
 .info_container .info_list .info {
-    margin:  0.5rem 0;
+    margin: 0.5rem 0;
     font-size: 1.2rem;
 }
 
-.info_container .info_list .info span  {
+.info_container .info_list .info span {
     font-weight: 700;
     color: #D12D6F;
 }
@@ -143,7 +129,6 @@ html {
     justify-content: flex-end;
     padding: 0 2.5rem;
     border-top: 1px solid #D12D6F;
-  
 }
 
 .info_container #quit {
@@ -171,12 +156,10 @@ html {
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
-    
 }
 
 .buttons #quit {
     color: #E05A5C;
-  
 }
 
 .buttons #start {
@@ -194,8 +177,7 @@ html {
     background: #D12D6F;
 }
 
-
- header {
+header {
     height: 70px;
     padding: 0 30px;
     background: #E05A5C;
@@ -203,13 +185,12 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
- }
+}
 
- header .title {
+header .title {
     font-size: 20px;
     font-weight: 600;
-  }
+}
 
 header .timer {
     display: flex;
@@ -252,15 +233,14 @@ header .timer .timer_sec {
 }
 
 .quiz_box {
-    
-     width: 45rem;
-     border-radius: 1rem;
-     margin: auto;
-     background: #E05A5C;
-     padding: 3rem 2rem;
-     box-shadow: 0px 3px 5px 1px #7A2D8D;
-       /* pointer-events: none; */
- }
+    width: 45rem;
+    border-radius: 1rem;
+    margin: auto;
+    background: #E05A5C;
+    padding: 3rem 2rem;
+    box-shadow: 0px 3px 5px 1px #7A2D8D;
+    /* pointer-events: none; */
+}
 
 .option_list {
     height: 4rem;
@@ -275,12 +255,9 @@ header .timer .timer_sec {
 }
 
 .option_list:hover {
-   background: #D12D6F;
-   transition: all 0.3s ease;
+    background: #D12D6F;
+    transition: all 0.3s ease;
 }
-
-
-
 
 .correct {
     background: rgb(195, 236, 133);
@@ -302,7 +279,7 @@ header .timer .timer_sec {
     height: 3.8rem;
 }
 
-.choices  {
+.choices {
     padding: 1.2rem;
     font-size: 1.2rem;
 }
@@ -328,7 +305,7 @@ header .timer .timer_sec {
 }
 
 .total_que span {
-     display: flex;
+    display: flex;
     user-select: none;
 }
 
@@ -342,7 +319,6 @@ header .timer .timer_sec {
     height: 3rem;
     border: 1px solid #fff;
     margin-top: 2rem;
-    
 }
 
 #progressFull {
