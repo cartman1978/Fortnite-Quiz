@@ -70,7 +70,6 @@ html {
     transition: all 0.3s ease; 
 }
 
-
 .hidden {
    display: none;
 }
@@ -253,6 +252,7 @@ header .timer .timer_sec {
 }
 
 .quiz_box {
+    
      width: 45rem;
      border-radius: 1rem;
      margin: auto;
