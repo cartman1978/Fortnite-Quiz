@@ -38,40 +38,17 @@ rules.addEventListener('click', () => {
     info_container.style.display = "inline-block";
 });
 
-//If Continue button is clicked, show quix_box
+//If Continue OK is clicked, remove info box and diplay buttons again
  continueBtn.addEventListener('click', () => {
     info_container.style.display = "none";
      btnContainer.classList.remove('hidden');
  });
 
+//  If Play Quiz button is clicjed, show 
  playGame.addEventListener('click', () => {
     quiz_box.classList.remove('hidden');
  });
 
-// If start button is clicked show info box
-
-// startButton.addEventListener('click', () => {
-//     info_container.classList.add("activeInfo");
-// });
-
-
-// start_btn.onclick = () => {
-//     info_container.classList.add("activeInfo");    
-// }
-
-// If quit button is clicked
-
-// quit.onclick = () => {
-//     info_container.classList.remove("activeInfo");
-// }
-
-// If continue button is clicked Show Quiz questions box
-
-// continueBtn.onclick = () => {
-//     info_container.classList.remove("activeInfo");
-//     quiz_box.classList.add("quizActive");
-//     end_box.classList.remove("quizActive");
-// }
 
 let questions = [
   {
