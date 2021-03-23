@@ -88,7 +88,6 @@ startGame = () => {
     console.log(availableQuestions);
     getNextQuestion();
 
-
 }
 
 
