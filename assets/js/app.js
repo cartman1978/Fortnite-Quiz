@@ -2,8 +2,9 @@
 
 const start_btn = document.querySelector('.start_btn button');
 const info_container = document.querySelector('.info_container');
-// const quit_btn = info_container.querySelector('.buttons .quit');
-// const continue_btn = info_container.querySelector('.buttons .restart');
+const startButton = document.querySelector('#startButton');
+const quitBtn = document.querySelector('#quit');
+const continueBtn = document.querySelector('#start');
 const quiz_box = document.querySelector('.quiz_box');
 const end_box = document.querySelector('#endBox');
 const endMessage = document.querySelector('.endMessage');
@@ -15,9 +16,7 @@ const questionText = document.querySelector('.questionText');
 const progressFull = document.querySelector('#progressFull');
 const gameSec = document.querySelector('#game-section');
 
-const startButton = document.querySelector('#startButton');
-const quitBtn = document.querySelector('#quit');
-const continueBtn = document.querySelector('#start');
+
 
 const playAgain = document.querySelector('#play-again');
 
@@ -29,15 +28,15 @@ let availableQuestions = [];
 const bonusCorrectAnswer = 10;
 const maxQuestions = 10;
 
+// If start button is clicked show info box
+
 startButton.addEventListener('click', () => {
     info_container.classList.add("activeInfo");
 });
 
-// If start button is clicked show info box
-// start_btn.onclick = () => {
-//     info_container.classList.add("activeInfo"); 
 
-    
+// start_btn.onclick = () => {
+//     info_container.classList.add("activeInfo");    
 // }
 
 // If quit button is clicked
