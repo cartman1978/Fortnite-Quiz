@@ -70,30 +70,12 @@ html {
     transition: all 0.3s ease; 
 }
 
-/* .info_container.activeInfo,
-.quiz_box.quizActive {
-    z-index: 5;
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
-} */
 
 .hidden {
    display: none;
 }
 
-/* #startButton  {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #D12D6F;
-    padding: 2rem 2rem;
-    outline: none;
-    border: none;
-    border-radius: 1rem;
-    background: #fff;
-    cursor: pointer;
-    text-decoration: none;
-} */
+
 
 .btn-container {
     text-align: center;
