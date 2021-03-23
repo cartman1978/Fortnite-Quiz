@@ -19,14 +19,15 @@
             <div id="loader" class="hidden"></div>
         </div>
     
-    <div class="start_btn" id="info_cont">
+    <div class="start_btn" id="quiz-btn">
 
-        <button>Start Quiz</button>
+        <!-- <button>Start Quiz</button> -->
+        <a href="#info-container" id="startButton" class="buttons" aria-label="play-game">Quiz Start</a>
         
     </div>
 
     <!-- Game rules Box -->
-    <div class="info_container">
+    <div id="info-container" class="info_container">
         <div class="info_title">
             <span>Game rules of this quiz</span>
         </div>
@@ -40,8 +41,10 @@
         </div>
 
         <div class="buttons">
-            <button class="quit">Quit</button>
-            <button class="restart">Continue</button>
+            <!-- <button class="quit">Quit</button>
+            <button class="restart">Continue</button> -->
+            <a href="#" id="quit" class="buttons" aria-label="quit-game">Quit</a>
+            <a href="#game-section" id="start" class="buttons" aria-label="play-game">Continue</a>
         </div>
 
     </div>
@@ -104,6 +107,7 @@
         <div id="endBox" class="end_box col-12 hidden">
             <p class="endMessage"></p>
             <p id="totalScore">Your Score is: <span id="finalScore"></span></p>
+            <a href="#game-section" id="play-again" class="buttons" aria-label="play-again">Play again!</a>
         </div>
 
      

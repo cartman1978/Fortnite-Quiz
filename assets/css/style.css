@@ -82,7 +82,7 @@ html {
    display: none;
 }
 
-.start_btn button {
+#startButton  {
     font-size: 1.5rem;
     font-weight: 700;
     color: #D12D6F;
@@ -92,6 +92,33 @@ html {
     border-radius: 1rem;
     background: #fff;
     cursor: pointer;
+    text-decoration: none;
+}
+
+#quit {
+   font-size: 1.5rem;
+    font-weight: 700;
+    color: #D12D6F;
+    padding: 2rem 2rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    background: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#start {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #D12D6F;
+    padding: 2rem 2rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    background: #fff;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .info_container {
@@ -134,36 +161,49 @@ html {
   
 }
 
-.info_container .buttons button {
+.info_container #quit {
     margin: 0 0.2rem;
     height: 3rem;
-    width: 7rem;
     outline: none;
     border: 1px solid #E05A5C;
     border-radius: 1rem;
-    color: #fff;
+    color: #E05A5C;
     font-size: 1.2rem;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.buttons button.quit {
+.info_container #start {
+    margin: 0 0.4rem;
+    height: 3rem;
+    outline: none;
+    border: 1px solid #E05A5C;
+    border-radius: 1rem;
+    color: #E05A5C;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+.buttons #quit {
     color: #E05A5C;
   
 }
 
-.buttons button.restart {
+.buttons #start {
     color: #fff;
     background: #D12D6F;
 }
 
-.buttons button.restart:hover {
+.buttons #start:hover {
     background: #fff;
     color: #D12D6F;
 }
 
-.buttons button.quit:hover {
+.buttons #quit:hover {
     color: #fff;
     background: #D12D6F;
 }

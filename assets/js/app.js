@@ -2,8 +2,8 @@
 
 const start_btn = document.querySelector('.start_btn button');
 const info_container = document.querySelector('.info_container');
-const quit_btn = info_container.querySelector('.buttons .quit');
-const continue_btn = info_container.querySelector('.buttons .restart');
+// const quit_btn = info_container.querySelector('.buttons .quit');
+// const continue_btn = info_container.querySelector('.buttons .restart');
 const quiz_box = document.querySelector('.quiz_box');
 const end_box = document.querySelector('#endBox');
 const endMessage = document.querySelector('.endMessage');
@@ -15,6 +15,12 @@ const questionText = document.querySelector('.questionText');
 const progressFull = document.querySelector('#progressFull');
 const gameSec = document.querySelector('#game-section');
 
+const startButton = document.querySelector('#startButton');
+const quitBtn = document.querySelector('#quit');
+const continueBtn = document.querySelector('#start');
+
+const playAgain = document.querySelector('#play-again');
+
 let currentQuestion = {};
 let questionCounter = 0;
 let gettingAnswer = false;
@@ -23,22 +29,26 @@ let availableQuestions = [];
 const bonusCorrectAnswer = 10;
 const maxQuestions = 10;
 
+startButton.addEventListener('click', () => {
+    info_container.classList.add("activeInfo");
+});
+
 // If start button is clicked show info box
-start_btn.onclick = () => {
-    info_container.classList.add("activeInfo"); 
+// start_btn.onclick = () => {
+//     info_container.classList.add("activeInfo"); 
 
     
-}
+// }
 
 // If quit button is clicked
 
-quit_btn.onclick = () => {
+quit.onclick = () => {
     info_container.classList.remove("activeInfo");
 }
 
 // If continue button is clicked Show Quiz questions box
 
-continue_btn.onclick = () => {
+continueBtn.onclick = () => {
     info_container.classList.remove("activeInfo");
     quiz_box.classList.add("quizActive");
     end_box.classList.remove("quizActive");
@@ -176,8 +186,9 @@ endGame = () => {
     const totalScore = maxQuestions * bonusCorrectAnswer;
     gameSec.classList.add('hidden');
     end_box.classList.remove('hidden');
+    
    
-    end_box.innerText = score + " / " + totalScore;
+    finalScore.innerText = score + " / " + totalScore;
    
     if (score === (maxQuestions * bonusCorrectAnswer)) {
         endMessage.innerText = "Wow this is what I call perfection!";
@@ -193,3 +204,8 @@ endGame = () => {
 };
 
 
+playAgain.addEventListener('click', () => {
+   gameSec.classList.remove('hidden');
+    end_box.classList.add('hidden');
+  
+});
