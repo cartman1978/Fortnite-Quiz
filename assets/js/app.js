@@ -98,10 +98,7 @@ getNextQuestion = () => {
         endGame();
     } else {
 
-    
-  
-    // questionText.innerText = `${questionCounter} / ${maxQuestions}`;
-      const questionIndex = Math.floor(Math.random()*availableQuestions.length);
+     const questionIndex = Math.floor(Math.random()*availableQuestions.length);
      questionCounter++;
     
     // update question progress bar
@@ -111,7 +108,7 @@ getNextQuestion = () => {
     question.innerText = currentQuestion.question;
 
     choices.forEach(choice => {
-       const number = choice.dataset["number"];
+       const number = choice.dataset.number;
        choice.innerText = currentQuestion["choice" + number];
     });
 
@@ -161,11 +158,9 @@ choices.forEach(choice => {
         }, 1500);
     }
 
-
-    getNextQuestion();
    });
 });
-}
+};
 
 startGame();
 
@@ -184,8 +179,6 @@ endGame = () => {
     const totalScore = maxQuestions * bonusCorrectAnswer;
     gameSec.classList.add('hidden');
     end_box.classList.remove('hidden');
-    
-   
     finalScore.innerText = score + " / " + totalScore;
    
     if (score === (maxQuestions * bonusCorrectAnswer)) {
