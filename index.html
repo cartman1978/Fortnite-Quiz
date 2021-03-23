@@ -18,15 +18,24 @@
        <div id="loader-container">
             <div id="loader" class="hidden"></div>
         </div>
-    
-    <div class="start_btn" id="quiz-btn">
+
+    <!-- Start button -->
+
+    <!-- <div class="start_btn" id="quiz-btn">
 
         <a href="#info-container" id="startButton" class="buttons" aria-label="play-game">Quiz Start</a>
         
+    </div> -->
+
+    <div class="col-12 btn-container">
+        <a href="#game-section" id="playGame" class="buttons" aria-label="play-game">Play Quiz</a>
+        <a href="#info-container" id="rules" class="buttons" aria-label="Quiz-Rules">Quiz Rules</a>
     </div>
 
+
+
     <!-- Game rules Box -->
-    <div id="info-container" class="info_container">
+    <div id="info-container" class="info_container hidden">
         <div class="info_title">
             <span>Game rules of this quiz</span>
         </div>
@@ -41,15 +50,15 @@
 
         <div class="buttons">
            
-            <a href="#" id="quit" class="buttons" aria-label="quit-game">Quit</a>
-            <a href="#game-section" id="start" class="buttons" aria-label="play-game">Continue</a>
+            <!-- <a href="#" id="quit" class="buttons" aria-label="quit-game">Quit</a> -->
+            <a href="#game-section" id="start" class="buttons" aria-label="play-game">Ok</a>
         </div>
 
     </div>
 
     <!-- Quiz Box -->
    
-    <div id="game-section" class="quiz_box col-12 hidden">
+    <div id="game-section" class="quiz_box hidden">
          <header>
             <div class="title">Videogame quizzes</div>
             <div class="timer">
@@ -105,7 +114,7 @@
         <div id="endBox" class="end_box col-12 hidden">
             <p class="endMessage"></p>
             <p id="totalScore">Your Score is: <span id="finalScore"></span></p>
-            <a href="#game-section" id="play-again" class="buttons" aria-label="play-again">Play again!</a>
+            <a href="#game-section"  id="play-again" class="buttons" aria-label="play-again">Play again!</a>
         </div>
 
      

@@ -70,19 +70,19 @@ html {
     transition: all 0.3s ease; 
 }
 
-.info_container.activeInfo,
+/* .info_container.activeInfo,
 .quiz_box.quizActive {
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
-}
+} */
 
 .hidden {
    display: none;
 }
 
-#startButton  {
+/* #startButton  {
     font-size: 1.5rem;
     font-weight: 700;
     color: #D12D6F;
@@ -93,6 +93,11 @@ html {
     background: #fff;
     cursor: pointer;
     text-decoration: none;
+} */
+
+.btn-container {
+    text-align: center;
+    margin-top: 15rem;
 }
 
 #quit {
@@ -108,7 +113,7 @@ html {
     text-decoration: none;
 }
 
-#start {
+#playGame, #rules {
     font-size: 1.5rem;
     font-weight: 700;
     color: #D12D6F;
@@ -121,12 +126,11 @@ html {
     text-decoration: none;
 }
 
+ 
 .info_container {
     width: 30rem;
     background: #fff;
     border-radius: 1rem;
-    opacity: 0;
-    pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
 }
 
@@ -175,8 +179,8 @@ html {
 }
 
 .info_container #start {
-    margin: 0 0.4rem;
-    height: 3rem;
+    margin: 0 0.2rem;
+    height: 4rem;
     outline: none;
     border: 1px solid #E05A5C;
     border-radius: 1rem;
@@ -185,6 +189,7 @@ html {
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
     
 }
 
@@ -267,13 +272,12 @@ header .timer .timer_sec {
 
 .quiz_box {
      width: 45rem;
-     opacity: 0;
      border-radius: 1rem;
      margin: auto;
      background: #E05A5C;
      padding: 3rem 2rem;
      box-shadow: 0px 3px 5px 1px #7A2D8D;
-       pointer-events: none;
+       /* pointer-events: none; */
  }
 
 .option_list {

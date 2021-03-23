@@ -1,7 +1,7 @@
 // getting all the elements
 
 const start_btn = document.querySelector('.start_btn button');
-const info_container = document.querySelector('.info_container');
+const info_container = document.querySelector('#info-container');
 const startButton = document.querySelector('#startButton');
 const quitBtn = document.querySelector('#quit');
 const continueBtn = document.querySelector('#start');
@@ -14,9 +14,12 @@ const finalScore = document.querySelector('#finalScore');
 const scoreInfo = document.querySelector('#score');
 const questionText = document.querySelector('.questionText');
 const progressFull = document.querySelector('#progressFull');
+const progressText =document.querySelector('#progressText');
 const gameSec = document.querySelector('#game-section');
 
-
+const btnContainer = document.querySelector('.btn-container');
+const rules = document.querySelector('#rules');
+const playGame = document.querySelector('#playGame');
 
 const playAgain = document.querySelector('#play-again');
 
@@ -28,11 +31,28 @@ let availableQuestions = [];
 const bonusCorrectAnswer = 10;
 const maxQuestions = 10;
 
+
+// If Quiz rule button is clicked
+rules.addEventListener('click', () => {
+    btnContainer.classList.add('hidden');
+    info_container.style.display = "inline-block";
+});
+
+//If Continue button is clicked, show quix_box
+ continueBtn.addEventListener('click', () => {
+    info_container.style.display = "none";
+     btnContainer.classList.remove('hidden');
+ });
+
+ playGame.addEventListener('click', () => {
+    quiz_box.classList.remove('hidden');
+ });
+
 // If start button is clicked show info box
 
-startButton.addEventListener('click', () => {
-    info_container.classList.add("activeInfo");
-});
+// startButton.addEventListener('click', () => {
+//     info_container.classList.add("activeInfo");
+// });
 
 
 // start_btn.onclick = () => {
@@ -41,17 +61,17 @@ startButton.addEventListener('click', () => {
 
 // If quit button is clicked
 
-quit.onclick = () => {
-    info_container.classList.remove("activeInfo");
-}
+// quit.onclick = () => {
+//     info_container.classList.remove("activeInfo");
+// }
 
 // If continue button is clicked Show Quiz questions box
 
-continueBtn.onclick = () => {
-    info_container.classList.remove("activeInfo");
-    quiz_box.classList.add("quizActive");
-    end_box.classList.remove("quizActive");
-}
+// continueBtn.onclick = () => {
+//     info_container.classList.remove("activeInfo");
+//     quiz_box.classList.add("quizActive");
+//     end_box.classList.remove("quizActive");
+// }
 
 let questions = [
   {
@@ -90,7 +110,8 @@ startGame = () => {
     availableQuestions = [...questions];
     console.log(availableQuestions);
     getNextQuestion();
-    gameSec.classList.remove('hidden');
+   quiz_box.classList.remove('hidden');
+   
 }
 
 
@@ -101,13 +122,14 @@ getNextQuestion = () => {
     } else {
 
     
-    questionCounter++;
-    questionText.innerText = `${questionCounter} / ${maxQuestions}`;
+  
+    // questionText.innerText = `${questionCounter} / ${maxQuestions}`;
+      const questionIndex = Math.floor(Math.random()*availableQuestions.length);
+     questionCounter++;
     
     // update question progress bar
-    progressFull.innerText = `${(questionCounter / maxQuestions) * 100 - 10}%`;
+    progressText.innerText = `${(questionCounter / maxQuestions) * 100 - 10}%`;
     progressFull.style.width = `${(questionCounter / maxQuestions) * 100 - 10}%`;
-    const questionIndex = Math.floor(Math.random()*availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
 
