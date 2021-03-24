@@ -50,7 +50,7 @@ body {
     }
 }
 
-.start_btn, .info_container, .quiz_box {
+.start_btn, .info_container, .quiz_box, #endBox {
     position: absolute;
     top: 60%;
     left: 50%;
@@ -334,3 +334,11 @@ header .timer .timer_sec {
 .score_main_text {
     margin: 1rem;
 }
+
+ #endBox {
+    background: #D12D6F;
+    width: 35rem;
+    height: 32rem;
+    border-radius: 1rem;
+    transform: translate(-50%, -50%) scale(0.9);
+ }
