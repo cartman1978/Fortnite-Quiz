@@ -26,6 +26,8 @@ const playAgain = document.querySelector('#play-again');
 const saveScoreBtn = document.querySelector('#saveScoreBtn');
 const username = document.querySelector('#username');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
+const userScore = JSON.parse(localStorage.getItem("userScore")) || [];
+console.log(userScore);
 
 let currentQuestion = {};
 let questionCounter = 0;
@@ -228,4 +230,11 @@ username.addEventListener('keyup', () => {
 saveScore = e => {
     console.log('saved gimnasium');
     e.preventDefault();
+
+    const score = {
+        score: mostRecentScore,
+        name: username.value
+    };
+    userScore.push(score);
+    console.log(userScore);
 }
