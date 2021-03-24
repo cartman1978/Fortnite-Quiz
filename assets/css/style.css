@@ -95,10 +95,15 @@ body {
 }
 
 .info_container {
-    width: 30rem;
+    width: 35rem;
+    height: 45rem;
     background: #fff;
     border-radius: 1rem;
     transform: translate(-50%, -50%) scale(0.9);
+}
+
+.info_list {
+    height: 30rem;
 }
 
 .info_container .info_title {
@@ -114,7 +119,7 @@ body {
 
 .info_container .info_list .info {
     margin: 0.5rem 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .info_container .info_list .info span {
