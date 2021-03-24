@@ -24,6 +24,8 @@ const playGame = document.querySelector('#playGame');
 
 const playAgain = document.querySelector('#play-again');
 const saveScoreBtn = document.querySelector('#saveScoreBtn');
+const username = document.querySelector('#username');
+const mostRecentScore = localStorage.getItem('mostRecentScore');
 
 let currentQuestion = {};
 let questionCounter = 0;
@@ -96,6 +98,8 @@ startGame = () => {
 // Function to get new questions 
 getNextQuestion = () => {
     if (availableQuestions.length === 0) {
+        // save user score
+        localStorage.setItem("mostRecentScore", score);
         endGame();
     } else {
 
@@ -213,6 +217,14 @@ exitBtn.addEventListener('click', () => {
 
 
 // Save Score function
+
+finalScore.innerText = mostRecentScore;
+
+username.addEventListener('keyup', () => {
+   console.log(username.value);
+   saveScoreBtn.disabled = !username.value;
+});
+
 saveScore = e => {
     console.log('saved gimnasium');
     e.preventDefault();
