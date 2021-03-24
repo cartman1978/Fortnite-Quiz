@@ -4,7 +4,7 @@
 
 Welcome to Video Game Quizzes !
 
-Are you a videogamer and you looking to test your ut your gaming knowledge to the test ?
+Are you a videogamer and you looking to test your gaming knowledge ?
 So let's get started and have fun!
 
 Thank you for visiting my project!
