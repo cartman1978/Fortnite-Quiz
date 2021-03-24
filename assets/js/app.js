@@ -8,6 +8,7 @@ const continueBtn = document.querySelector('#start');
 const quiz_box = document.querySelector('.quiz_box');
 const end_box = document.querySelector('#endBox');
 const endMessage = document.querySelector('.endMessage');
+const exitBtn = document.querySelector('#exit');
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choices'));
 const finalScore = document.querySelector('#finalScore');
@@ -49,6 +50,12 @@ playGame.addEventListener('click', () => {
     quiz_box.classList.remove('hidden');
 });
 
+// When game is finish end box is displayed
+// If exit button is clicked, return to home page
+
+exitBtn.addEventListener('click', () => {
+   end_box.classList.add('hidden');
+});
 
 let questions = [
     {

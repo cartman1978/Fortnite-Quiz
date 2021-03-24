@@ -335,6 +335,8 @@ header .timer .timer_sec {
     margin: 1rem;
 }
 
+/* End Box Container */
+
  #endBox {
     background: #D12D6F;
     width: 35rem;
@@ -357,10 +359,11 @@ header .timer .timer_sec {
      margin-bottom: 8rem;
  }
 
- #play-again {
+ #play-again, #exit {
     background: #fff;
     color: #D12D6F;
     font-size: 1.5rem;
+    font-weight: 700;
     padding: 2rem 1.5rem;
     border-radius: 1rem;
     cursor: pointer;
