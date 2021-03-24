@@ -233,7 +233,7 @@ saveScore = e => {
     e.preventDefault();
 
     const score = {
-        score: mostRecentScore,
+        score: Math.floor(Math.random()*100),
         name: username.value
     };
     // store more than one user score
@@ -242,5 +242,7 @@ saveScore = e => {
     userScore.sort((a,b) => b.score - a.score);
     // number of high score we want to store
     userScore.splice(5);
+    // Save user scores in localstorage
+    localStorage.setItem('userScore', JSON.stringify(userScore));
     console.log(userScore);
 }
