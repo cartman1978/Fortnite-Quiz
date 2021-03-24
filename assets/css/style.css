@@ -94,6 +94,11 @@ body {
     text-decoration: none;
 }
 
+#rules {
+    background: #D12D6F;
+    color: #fff;
+}
+
 .info_container {
     width: 35rem;
     height: 45rem;
