@@ -354,6 +354,7 @@ header .timer .timer_sec {
     height: 48rem;
     border-radius: 1rem;
     transform: translate(-50%, -50%) scale(0.9);
+    box-shadow: 0px 3px 5px 1px #7A2D8D;
  }
 
  .endMessage {
@@ -418,4 +419,10 @@ input {
     border-radius: 1rem;
     cursor: pointer;
     text-decoration: none;
+}
+
+#saveScore {
+    color: #7A2D8D;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
