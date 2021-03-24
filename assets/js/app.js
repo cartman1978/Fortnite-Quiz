@@ -23,6 +23,7 @@ const rules = document.querySelector('#rules');
 const playGame = document.querySelector('#playGame');
 
 const playAgain = document.querySelector('#play-again');
+const saveScoreBtn = document.querySelector('#saveScoreBtn');
 
 let currentQuestion = {};
 let questionCounter = 0;
@@ -210,3 +211,9 @@ exitBtn.addEventListener('click', () => {
    end_box.classList.add('hidden');
 });
 
+
+// Save Score function
+saveScore = e => {
+    console.log('saved gimnasium');
+    e.preventDefault();
+}
