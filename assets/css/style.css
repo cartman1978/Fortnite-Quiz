@@ -353,7 +353,7 @@ header .timer .timer_sec {
  #totalScore {
      color: #fff;
      margin-top: 3rem;
-     font-size: 1.2rem;
+     font-size: 1.8rem;
      margin-bottom: 8rem;
  }
 
@@ -365,4 +365,8 @@ header .timer .timer_sec {
     border-radius: 1rem;
     cursor: pointer;
     text-decoration: none;
+ }
+
+ #finalScore {
+     color: rgb(195, 236, 133);
  }
