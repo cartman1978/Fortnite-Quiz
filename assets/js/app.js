@@ -50,12 +50,6 @@ playGame.addEventListener('click', () => {
     quiz_box.classList.remove('hidden');
 });
 
-// When game is finish end box is displayed
-// If exit button is clicked, return to home page
-
-exitBtn.addEventListener('click', () => {
-   end_box.classList.add('hidden');
-});
 
 let questions = [
     {
@@ -200,9 +194,19 @@ endGame = () => {
     }
 };
 
+// When game is finish end box is displayed
+// If Play again button is clicked, show game_box and restart the game
 
 playAgain.addEventListener('click', () => {
     gameSec.classList.remove('hidden');
     end_box.classList.add('hidden');
     startGame();
 });
+
+// When game is finish end box is displayed
+// If exit button is clicked, return to home page
+
+exitBtn.addEventListener('click', () => {
+   end_box.classList.add('hidden');
+});
+
