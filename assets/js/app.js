@@ -27,6 +27,7 @@ const saveScoreBtn = document.querySelector('#saveScoreBtn');
 const username = document.querySelector('#username');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 const userScore = JSON.parse(localStorage.getItem("userScore")) || [];
+const max_high_score = 5;
 console.log(userScore);
 
 let currentQuestion = {};
@@ -235,6 +236,11 @@ saveScore = e => {
         score: mostRecentScore,
         name: username.value
     };
+    // store more than one user score
     userScore.push(score);
+    // function to sort score from highst to lowest
+    userScore.sort((a,b) => b.score - a.score);
+    // number of high score we want to store
+    userScore.splice(5);
     console.log(userScore);
 }
