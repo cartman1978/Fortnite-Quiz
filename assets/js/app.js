@@ -197,5 +197,5 @@ endGame = () => {
 playAgain.addEventListener('click', () => {
     gameSec.classList.remove('hidden');
     end_box.classList.add('hidden');
-
+    startGame();
 });
