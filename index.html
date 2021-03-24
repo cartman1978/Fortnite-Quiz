@@ -107,9 +107,24 @@
     <div id="endBox" class="end_box col-12 hidden">
         <p class="endMessage"></p>
         <p id="totalScore">Your Score is: <span id="finalScore"></span></p>
-        <a href="#game-section" id="play-again" class="buttons" aria-label="play-again">Play again</a>
+           <form>
+               <input type="text" name="username" id="username" placeholder="username">
+               <button 
+                  type="submit" 
+                  class="buttons" 
+                  id="saveScoreBtn"
+                  onclick="saveHighScore(event)"
+                  disabled>
+                  Save
+                </button>
+           </form>
+        <div class="buttons">
+            <a href="#game-section" id="play-again" class="buttons" aria-label="play-again">Play again</a>
         <a href="#" id="exit" class="buttons" aria-label="exit">Exit</a>
+        </div>
     </div>
+
+
 
 
 
