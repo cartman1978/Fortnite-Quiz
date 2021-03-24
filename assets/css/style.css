@@ -350,7 +350,7 @@ header .timer .timer_sec {
  #endBox {
     background: #D12D6F;
     width: 35rem;
-    height: 38rem;
+    height: 48rem;
     border-radius: 1rem;
     transform: translate(-50%, -50%) scale(0.9);
  }
@@ -370,11 +370,11 @@ header .timer .timer_sec {
  }
 
  #play-again, #exit {
-    background: #fff;
-    color: #D12D6F;
+    background: #7A2D8D;
+    color: #fff;
     font-size: 1.5rem;
     font-weight: 700;
-    padding: 2rem 1.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 1rem;
     cursor: pointer;
     text-decoration: none;
@@ -386,6 +386,8 @@ header .timer .timer_sec {
 
  .buttonsEnd {
      margin-top: 5rem;
+     display: flex;
+     justify-content: space-between;
  }
 
  form {
