@@ -58,6 +58,7 @@ continueBtn.addEventListener('click', () => {
 //  If Play Quiz button is clicked, show 
 playGame.addEventListener('click', () => {
     quiz_box.classList.remove('hidden');
+    startGame();
 });
 
 
@@ -226,7 +227,7 @@ exitBtn.addEventListener('click', () => {
 // If LeaderBoard button is clicked, show leaderboard box
 leaderBtn.addEventListener('click', () => {
      leaderBox.classList.remove('hidden');
-     
+     startGame();
 });
 
 // Once in the Leaderboard box, if user click exit
@@ -268,3 +269,8 @@ scoreList.innerHTML =
 userScore.map(score => {
    return `<li class = "user-score">${score.name} - ${score.score}</li>`;
 }).join("");
+
+// clear input after submit
+ saveScoreBtn.addEventListener('click', () => {
+      document.getElementById('username').value = '';
+    });
