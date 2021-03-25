@@ -371,7 +371,7 @@ header .timer .timer_sec {
      margin-bottom: 8rem;
  }
 
- #play-again, #exit {
+ #play-again, #exit, #exitLeader {
     background: #7A2D8D;
     color: #fff;
     font-size: 1.5rem;
@@ -445,8 +445,5 @@ input {
     font-weight: 700;
 }
 
-/* Leader-board box */
 
-#leader-board {
 
-}
