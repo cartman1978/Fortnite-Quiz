@@ -51,7 +51,7 @@ continueBtn.addEventListener('click', () => {
     btnContainer.classList.remove('hidden');
 });
 
-//  If Play Quiz button is clicjed, show 
+//  If Play Quiz button is clicked, show 
 playGame.addEventListener('click', () => {
     quiz_box.classList.remove('hidden');
 });
