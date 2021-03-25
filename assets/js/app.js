@@ -249,7 +249,7 @@ saveScore = e => {
     e.preventDefault();
 
     const score = {
-        score: Math.floor(Math.random()*100),
+        score: mostRecentScore,
         name: username.value
     };
     // store more than one user score
@@ -266,5 +266,5 @@ saveScore = e => {
 // Load and dispaly User High score from local storage
 scoreList.innerHTML = 
 userScore.map(score => {
-   return `<li class = "user-score">${score.name}-${score.score}</li>`;
+   return `<li class = "user-score">${score.name} - ${score.score}</li>`;
 }).join("");
