@@ -29,6 +29,7 @@ const leaderBtn = document.querySelector('#show-leaderboard');
 const exitLeaderBox = document.querySelector('#exitLeader');
 const username = document.querySelector('#username');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
+const scoreList = document.querySelector('#scoreList');
 const userScore = JSON.parse(localStorage.getItem("userScore")) || [];
 const max_high_score = 5;
 console.log(userScore);
@@ -259,5 +260,11 @@ saveScore = e => {
     userScore.splice(5);
     // Save user scores in localstorage
     localStorage.setItem('userScore', JSON.stringify(userScore));
-    console.log(userScore);
+    
 }
+
+// Load and dispaly User High score from local storage
+scoreList.innerHTML = 
+userScore.map(score => {
+   return `<li class = "user-score">${score.name}-${score.score}</li>`;
+}).join("");
