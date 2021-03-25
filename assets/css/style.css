@@ -445,5 +445,14 @@ input {
     font-weight: 700;
 }
 
+/* LidearBoard box */
+
+.user-score {
+    list-style: none;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
 
 
