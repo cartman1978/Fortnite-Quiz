@@ -24,6 +24,8 @@ const playGame = document.querySelector('#playGame');
 
 const playAgain = document.querySelector('#play-again');
 const saveScoreBtn = document.querySelector('#saveScoreBtn');
+const leaderBox = document.querySelector('#leader-board');
+const leaderBtn = document.querySelector('#show-leaderboard');
 const username = document.querySelector('#username');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 const userScore = JSON.parse(localStorage.getItem("userScore")) || [];
@@ -218,6 +220,10 @@ exitBtn.addEventListener('click', () => {
    end_box.classList.add('hidden');
 });
 
+// If LeaderBoard button is clicked, show leaderboard box
+leaderBtn.addEventListener('click', () => {
+     leaderBox.classList.remove('hidden');
+});
 
 // Save Score function
 
