@@ -181,6 +181,11 @@ const validateUserAnswer = () => {
                 setTimeout(() => {
                     choiceSelected.classList.remove('incorrect');
                     correctAnswer.classList.remove('correct');
+               
+                    clearInterval(counter);
+                    clearInterval(counterLine);
+                    startTime(15);
+                    startTimerLine(0);
                     getNextQuestion();
                 }, 1500);
             }
