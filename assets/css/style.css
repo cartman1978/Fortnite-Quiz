@@ -203,7 +203,7 @@ header .title {
     font-weight: 600;
 }
 
-header .timer {
+.quiz_box header .timer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -215,13 +215,13 @@ header .timer {
     padding: 0 8px;
 }
 
-header .timer .time_text {
+.quiz_box header .timer .time_text {
     font-weight: 400;
     font-size: 1rem;
     user-select: none;
 }
 
-header .timer .timer_sec {
+.quiz_box header .timer .timer_sec {
     font-size: 1rem;
     font-weight: 700;
     background: #7A2D8D;
@@ -234,7 +234,7 @@ header .timer .timer_sec {
     user-select: none;
 }
 
-.time_line {
+.quiz_box header .time_line {
     position: absolute;
     top: 10rem;
     left: 0;
@@ -245,7 +245,7 @@ header .timer .timer_sec {
 }
 
 .quiz_box {
-    width: 45rem;
+    width: 550px;
     border-radius: 1rem;
     margin: auto;
     background: #E05A5C;
