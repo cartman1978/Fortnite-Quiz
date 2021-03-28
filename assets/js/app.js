@@ -106,8 +106,6 @@ startGame = () => {
     scoreInfo.innerText = score;
     availableQuestions = [...questions];
     console.log(availableQuestions);
-    // startTime(15);
-    // startTiemeLine(0);
     clearInterval(counter);
     startTime(timeValue);
     clearInterval(counterLine);
