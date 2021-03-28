@@ -31,7 +31,7 @@ const username = document.querySelector('#username');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 const scoreList = document.querySelector('#scoreList');
 const userScore = JSON.parse(localStorage.getItem("userScore")) || [];
-const max_high_score = 5;
+// const max_high_score = 5;
 console.log(userScore);
 
 let currentQuestion = {};
@@ -73,7 +73,7 @@ fetch('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=
         console.log(loadedQuestions.results);
         questions = loadedQuestions.results.map(loadedQuestions => {
             const questionFormatted = {
-             question: loadedQuestions.question
+             question: loadedQuestions.question,
             };
 
             const answerChoices = [ ...loadedQuestions.incorrect_answers];
@@ -176,8 +176,6 @@ const validateUserAnswer = () => {
     });
 };
 
-// startGame();
-
 
 // Incremeant score if answer is correct
 
@@ -212,9 +210,10 @@ endGame = () => {
 // If Play again button is clicked, show game_box and restart the game
 
 playAgain.addEventListener('click', () => {
-    gameSec.classList.remove('hidden');
+    // gameSec.classList.remove('hidden');
     end_box.classList.add('hidden');
-    startGame();
+    quiz_box.classList.remove('hidden');
+    // startGame();
 });
 
 // When game is finish end box is displayed
