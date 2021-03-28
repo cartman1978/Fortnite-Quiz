@@ -7,6 +7,9 @@ const quitBtn = document.querySelector('#quit');
 const continueBtn = document.querySelector('#start');
 const quiz_box = document.querySelector('.quiz_box');
 const end_box = document.querySelector('#endBox');
+const timeCount = quiz_box.querySelector(".timer .timer_sec");
+const timeLine = quiz_box.querySelector(" header .time_line");
+const timeOff = quiz_box.querySelector(" header .time_text");
 const endMessage = document.querySelector('.endMessage');
 const exitBtn = document.querySelector('#exit');
 const question = document.querySelector('#question');
@@ -41,6 +44,10 @@ let score = 0;
 let availableQuestions = [];
 const bonusCorrectAnswer = 10;
 const maxQuestions = 10;
+let counter;
+let counterLine;
+let timeValue = 15;
+let widthValue = 0;
 
 
 // If Quiz rule button is clicked
@@ -99,8 +106,14 @@ startGame = () => {
     scoreInfo.innerText = score;
     availableQuestions = [...questions];
     console.log(availableQuestions);
+    // startTime(15);
+    // startTiemeLine(0);
+    clearInterval(counter);
+    startTime(timeValue);
+    clearInterval(counterLine);
+    startTimerLine(widthValue);
     getNextQuestion();
-
+    timeOff.textContent = "Time Left";
 }
 
 
@@ -274,3 +287,35 @@ userScore.map(score => {
  saveScoreBtn.addEventListener('click', () => {
       document.getElementById('username').value = '';
     });
+
+// Function to start time counter
+function startTime(time) {
+   counter = setInterval(timer, 1000);
+       function timer() {
+         timeCount.textContent = time;
+         time --;
+         if (time < 9) {
+             let addZero = timeCount.textContent;
+             timeCount.textContent = "0" + addZero;
+         }
+         if (time < 0) {
+             clearInterval(counter);
+             timeCount.textContent = "00";
+             timeOff.textContent = "Time Off";
+
+         }
+       }
+   
+};
+
+// Function to start timeLine
+function startTimerLine(time) {
+    counterLine = setInterval(timer, 29);
+    function timer() {
+        time += 1;
+        timeLine.style.width = time + "px";
+        if (time > 549) {
+            clearInterval(counterLine);
+        }
+    }
+}
