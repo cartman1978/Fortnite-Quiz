@@ -246,7 +246,7 @@ username.addEventListener('keyup', () => {
 });
 
 saveScore = e => {
-    console.log('saved gimnasium');
+    console.log('score saved');
     e.preventDefault();
 
     const score = {
