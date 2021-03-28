@@ -70,7 +70,22 @@ fetch('https://opentdb.com/api.php?amount=15&category=15&difficulty=medium&type=
     })
     .then((loadedQuestions) => {
         // questions = loadedQuestions;
-        console.log(loadedQuestions);
+        console.log(loadedQuestions.results);
+        questions = loadedQuestions.results.map(loadedQuestions => {
+            const questionFormatted = {
+             question: loadedQuestions.question
+            };
+
+            const answerChoices = [ ...loadedQuestions.incorrect_answers];
+            questionFormatted.answer = Math.floor(Math.random()*3) + 1;
+            answerChoices.splice(questionFormatted.answer -1, 0, loadedQuestions.correct_answer);
+
+            answerChoices.forEach((choice, index) => {
+                questionFormatted["choice" + (index + 1)] = choice;
+            })
+            return questionFormatted;
+        });
+        startGame();
     })
     .catch((err) => {
         console.log(err);
