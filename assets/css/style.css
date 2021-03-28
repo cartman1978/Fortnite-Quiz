@@ -253,9 +253,9 @@ header .timer .timer_sec {
 }
 
 .option_list {
-    height: 4rem;
+    height: 6rem;
     background: #7A2D8D;
-    padding: 0 1.2rem;
+    padding: 0 0.1rem;
     margin: 1rem 0;
     margin-bottom: 1rem;
     border-radius: 1rem;
