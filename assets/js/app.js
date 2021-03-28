@@ -64,7 +64,7 @@ playGame.addEventListener('click', () => {
 
 let questions = [];
 
-fetch('https://opentdb.com/api.php?amount=15&category=15&difficulty=medium&type=multiple')
+fetch('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple')
     .then((res) => {
         return res.json();
     })
