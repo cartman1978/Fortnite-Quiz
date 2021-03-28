@@ -340,6 +340,7 @@ header .timer .timer_sec {
 
 .score_box {
     color: #fff;
+    font-size: 2rem;
 }
 
 .score_main_text {
