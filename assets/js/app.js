@@ -142,6 +142,7 @@ getNextQuestion = () => {
         availableQuestions.splice(questionIndex, 1);
         gettingAnswer = true;
         validateUserAnswer();
+        
     }
 };
 
@@ -308,13 +309,13 @@ function startTime(time) {
             
             let theAnswer = currentQuestion.answer;
             let answerToShow = document.querySelector(`[data-number="${theAnswer}"]`);
-            answerToShow.classList.add('correct');
+            // answerToShow.classList.add('correct');
              clearInterval(counter);
              clearInterval(counterLine);
              startTime(15);
              startTimerLine(0);
              getNextQuestion();
-            
+        
          }
        }
    

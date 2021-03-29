@@ -346,6 +346,14 @@ header .title {
     font-size: 2rem;
 }
 
+.score_text {
+    background: #7A2D8D;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    width: 12rem;
+    padding: 1rem;
+}
+
 .score_main_text {
     margin: 1rem;
 }
