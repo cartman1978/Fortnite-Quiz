@@ -178,7 +178,7 @@ const validateUserAnswer = () => {
                 choiceSelected.classList.add('incorrect');
                 setTimeout(() => {
                     correctAnswer.classList.add('correct');
-                }, 1000);
+                }, 900);
                 setTimeout(() => {
                     choiceSelected.classList.remove('incorrect');
                     correctAnswer.classList.remove('correct');
