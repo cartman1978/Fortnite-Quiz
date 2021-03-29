@@ -131,3 +131,12 @@ Below you can find my wireframes:
 
 ### Tablet Wireframes
 * [Homepage](wireframes/tablet-wireframe.jpg)
+
+### Desktop Wireframes
+* [Homepage](wireframes/desktop-wireframe.jpg)
+
+[Back to Top](#table-of-contents)
+
+---
+
+<a></a>
