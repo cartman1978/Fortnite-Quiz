@@ -128,3 +128,6 @@ Below you can find my wireframes:
 
 ### Mobile Wireframes
 * [Homepage](wireframes/mobile-wireframe.jpg)
+
+### Tablet Wireframes
+* [Homepage](wireframes/tablet-wireframe.jpg)
