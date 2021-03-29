@@ -117,3 +117,14 @@ I have decide to use some colors that reminds the background image used.
 * Colot #fff is used for all the text and headings. 
 
 ![Color Palette](wireframes/videogame-color.png)
+
+[Back to Top](#table-of-contents)
+
+## **Wireframes**
+
+For the wireframes design I decide to use [Balsamic](https://balsamiq.com/wireframes/). First I created a basic wireframe for mobile and after I created the one for desktop and tablet.
+
+Below you can find my wireframes:
+
+### Mobile Wireframes
+* [Homepage](wireframes/mobile-wireframe.jpg)
