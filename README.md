@@ -150,4 +150,12 @@ Below you can find my wireframes:
 * Questions progression 
 * Timer countdown for each question
 * Score update while user is playing
-* Personal message when game is over depending on the final score
+* Personal message when game is over depending on the   final score
+* User score can be saved in local storage 
+* Leaderboard with top 5 scores
+
+<a></a>
+### **Features to be implemented**
+* Database to proper save and render user scores
+* Add different images for each questions
+* Implement difficulty to be choosen by users
