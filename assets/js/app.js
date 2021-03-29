@@ -236,15 +236,16 @@ playAgain.addEventListener('click', () => {
     startTime(15);
     startTimerLine(0);
     startGame();
-    
 });
 
 // When game is finish end box is displayed
 // If exit button is clicked, return to home page
 
 exitBtn.addEventListener('click', () => {
-   end_box.classList.add('hidden');
-    btnContainer.classList.remove('hidden');
+//    btnContainer.classList.remove('hidden');
+//    end_box.classList.add('hidden');
+   end_box.style.display = 'none';
+  btnContainer.style.display = 'block';
 });
 
 // If LeaderBoard button is clicked, show leaderboard box
