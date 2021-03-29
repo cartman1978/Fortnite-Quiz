@@ -111,4 +111,9 @@ For the title of my game, I have used the font [Source Code Pro](https://fonts.g
 
 I have decide to use some colors that reminds the background image used.
 
+* Color #D12D6F is used for some buttons, progression bar and the endgame container.
+* Color #E05A5C is used for main game box container.
+* Colot #7A2D8D is used for the 4 possible answers to the questions.
+* Colot #fff is used for all the text and headings. 
+
 ![Color Palette](wireframes/videogame-color.png)
