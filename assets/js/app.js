@@ -110,7 +110,7 @@ startGame = () => {
     clearInterval(counter);
     startTime(timeValue);
     clearInterval(counterLine);
-    startTimerLine(widthValue);
+    // startTimerLine(widthValue);
     getNextQuestion();
     timeOff.textContent = "Time Left";
 }
@@ -186,7 +186,7 @@ const validateUserAnswer = () => {
                     clearInterval(counter);
                     clearInterval(counterLine);
                     startTime(15);
-                    startTimerLine(0);
+                    // startTimerLine(0);
                     getNextQuestion();
                 }, 1500);
             }
@@ -321,7 +321,7 @@ function startTime(time) {
              clearInterval(counter);
             //  clearInterval(counterLine);
              startTime(15);
-             startTimerLine(0);
+            //  startTimerLine(0);
              getNextQuestion();
         
          }

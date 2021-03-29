@@ -279,11 +279,10 @@ header .title {
     transition: all 0.3s ease;
 }
 
-.correct {
+ .correct {
     background: rgb(195, 236, 133);
     color: #000;
     border-radius: 1rem;
-    width: 48.8rem;
     margin-left: -0.1rem;
     height: 5.8rem;
 }
@@ -295,7 +294,6 @@ header .title {
 .incorrect {
     background: rgb(245, 73, 73);
     border-radius: 1rem;
-    width: 48.8rem;
     margin-left: -0.1rem;
     height: 5.8rem;
 }
@@ -496,5 +494,9 @@ input {
 @media screen and (max-width: 460px) {
     .quiz_box {
         width: 350px;
+    }
+
+    .quiz_box header .timer {
+        margin-right: -2rem;
     }
 }
