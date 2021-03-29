@@ -70,6 +70,7 @@ playGame.addEventListener('click', () => {
 
 
 let questions = [];
+// Fetching data from Trivia Api
 
 fetch('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple')
     .then((res) => {
@@ -208,6 +209,7 @@ endGame = () => {
     const totalScore = maxQuestions * bonusCorrectAnswer;
     gameSec.classList.add('hidden');
     end_box.classList.remove('hidden');
+    btnContainer.classList.add('hidden');
     finalScore.innerText = score + " / " + totalScore;
 
     if (score === (maxQuestions * bonusCorrectAnswer)) {
