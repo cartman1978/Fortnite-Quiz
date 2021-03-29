@@ -221,7 +221,7 @@ header .title {
     border: 1px solid var(--eminence);
     border-radius: 1rem;
     padding: 0 8px;
-    box-shadow: 0px 3px 5px 1px var(--eminence);
+    
 }
 
 .quiz_box header .timer .time_text {
@@ -250,7 +250,7 @@ header .title {
     height: 0.3rem;
     width: 100%;
     background: var(--eminence);
-    
+    box-shadow: 0px 3px 5px 1px var(--eminence);
 }
 
 .quiz_box {
@@ -293,7 +293,7 @@ header .title {
 }
 
 .incorrect {
-    background: rgb(245, 73, 73);
+    background: rgb(238, 9, 9);
     border-radius: 1rem;
     margin-left: -0.1rem;
     height: 5.8rem;
@@ -520,3 +520,11 @@ input {
         margin-right: -2rem;
     }
 }
+
+@media screen and (min-width: 1280px) {
+   #main-title {
+       margin-top: -13rem;
+   }
+}
+
+
