@@ -140,3 +140,14 @@ Below you can find my wireframes:
 ---
 
 <a></a>
+## **Features**
+<a></a>
+### **Existing Features**
+
+* Use of [open Trivia API](https://opentdb.com/) 
+* Answer validation
+* Feedback provided if answer is incorrect
+* Questions progression 
+* Timer countdown for each question
+* Score update while user is playing
+* Personal message when game is over depending on the final score
