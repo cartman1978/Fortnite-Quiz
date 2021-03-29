@@ -275,9 +275,9 @@ header .title {
     background: rgb(195, 236, 133);
     color: #000;
     border-radius: 1rem;
-    width: 38.8rem;
-    margin-left: -1.2rem;
-    height: 3.8rem;
+    width: 48.8rem;
+    margin-left: -0.4rem;
+    height: 5.8rem;
 }
 
 .icon {
@@ -287,10 +287,11 @@ header .title {
 .incorrect {
     background: rgb(245, 73, 73);
     border-radius: 1rem;
-    width: 38.8rem;
-    margin-left: -1.2rem;
-    height: 3.8rem;
+    width: 48.8rem;
+    margin-left: 0.2rem;
+    height: 5.8rem;
 }
+
 
 .choices {
     padding: 1.2rem;
