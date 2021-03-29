@@ -305,7 +305,16 @@ function startTime(time) {
              clearInterval(counter);
              timeCount.textContent = "00";
              timeOff.textContent = "Time Off";
-
+            
+            let theAnswer = currentQuestion.answer;
+            let answerToShow = document.querySelector(`[data-number="${theAnswer}"]`);
+            answerToShow.classList.add('correct');
+             clearInterval(counter);
+             clearInterval(counterLine);
+             startTime(15);
+             startTimerLine(0);
+             getNextQuestion();
+            
          }
        }
    
