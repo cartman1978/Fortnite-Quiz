@@ -493,10 +493,22 @@ input {
 /* Media queries mobile */
 @media screen and (max-width: 460px) {
     .quiz_box {
-        width: 350px;
+        width: 330px;
     }
 
     .quiz_box header .timer {
         margin-right: -2rem;
     }
+
+    #question {
+        font-size: 1.5rem;
+    }
+
+    header .title {
+    font-size: 1.5rem;
+}
+
+.option_list {
+    margin: 0.2rem 0;
+}
 }
