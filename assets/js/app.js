@@ -233,9 +233,9 @@ playAgain.addEventListener('click', () => {
     end_box.classList.add('hidden');
     quiz_box.classList.remove('hidden');
      clearInterval(counter);
-    clearInterval(counterLine);
+    // clearInterval(counterLine);
     startTime(15);
-    startTimerLine(0);
+    // startTimerLine(0);
     startGame();
 });
 
