@@ -229,10 +229,14 @@ endGame = () => {
 // If Play again button is clicked, show game_box and restart the game
 
 playAgain.addEventListener('click', () => {
-    // gameSec.classList.remove('hidden');
     end_box.classList.add('hidden');
     quiz_box.classList.remove('hidden');
-    // startGame();
+     clearInterval(counter);
+    clearInterval(counterLine);
+    startTime(15);
+    startTimerLine(0);
+    startGame();
+    
 });
 
 // When game is finish end box is displayed
@@ -240,7 +244,7 @@ playAgain.addEventListener('click', () => {
 
 exitBtn.addEventListener('click', () => {
    end_box.classList.add('hidden');
-   
+    btnContainer.classList.remove('hidden');
 });
 
 // If LeaderBoard button is clicked, show leaderboard box
