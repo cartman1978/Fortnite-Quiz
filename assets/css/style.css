@@ -207,8 +207,8 @@ header .title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 12rem;
-    height: 3.5rem;
+    width: 15rem;
+    height: 4.5rem;
     background: #D12D6F;
     border: 1px solid #7A2D8D;
     border-radius: 1rem;
@@ -222,11 +222,11 @@ header .title {
 }
 
 .quiz_box header .timer .timer_sec {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     background: #7A2D8D;
-    height: 2.3rem;
-    width: 1.9rem;
+    height: 2.8rem;
+    width: 3.9rem;
     color: #fff;
     text-align: center;
     line-height: 2.2rem;
