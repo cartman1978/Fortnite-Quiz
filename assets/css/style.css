@@ -221,6 +221,7 @@ header .title {
     border: 1px solid var(--eminence);
     border-radius: 1rem;
     padding: 0 8px;
+    box-shadow: 0px 3px 5px 1px var(--eminence);
 }
 
 .quiz_box header .timer .time_text {
@@ -242,15 +243,15 @@ header .title {
     user-select: none;
 }
 
-/* .quiz_box header .time_line {
+.quiz_box header .time_line {
     position: absolute;
     top: 10rem;
     left: 0;
-    height: 0.8rem;
+    height: 0.3rem;
     width: 100%;
     background: var(--eminence);
     
-} */
+}
 
 .quiz_box {
     width: 550px;
@@ -511,4 +512,11 @@ input {
 .option_list {
     margin: 0.2rem 0;
 }
+}
+
+/* Media queries for Tablet */
+@media screen and (min-width: 768px) {
+    .quiz_box header .timer {
+        margin-right: -2rem;
+    }
 }
