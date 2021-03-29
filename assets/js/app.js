@@ -48,7 +48,7 @@ let counter;
 let counterLine;
 let timeValue = 15;
 let widthValue = 0;
-
+let que_num = 1;
 
 // If Quiz rule button is clicked
 rules.addEventListener('click', () => {
@@ -132,6 +132,7 @@ getNextQuestion = () => {
         progressFull.style.width = `${(questionCounter / maxQuestions) * 100 - 10}%`;
         currentQuestion = availableQuestions[questionIndex];
         question.innerText = currentQuestion.question;
+         
 
         choices.forEach(choice => {
             const number = choice.dataset.number;
@@ -143,7 +144,7 @@ getNextQuestion = () => {
         availableQuestions.splice(questionIndex, 1);
         gettingAnswer = true;
         validateUserAnswer();
-        
+      
     }
 };
 
@@ -318,7 +319,7 @@ function startTime(time) {
             let answerToShow = document.querySelector(`[data-number="${theAnswer}"]`);
             // answerToShow.classList.add('correct');
              clearInterval(counter);
-             clearInterval(counterLine);
+            //  clearInterval(counterLine);
              startTime(15);
              startTimerLine(0);
              getNextQuestion();
@@ -329,13 +330,14 @@ function startTime(time) {
 };
 
 // Function to start timeLine
-function startTimerLine(time) {
-    counterLine = setInterval(timer, 29);
-    function timer() {
-        time += 1;
-        timeLine.style.width = time + "px";
-        if (time > 549) {
-            clearInterval(counterLine);
-        }
-    }
-}
+// function startTimerLine(time) {
+//     counterLine = setInterval(timer, 29);
+//     function timer() {
+//         time += 1;
+//         timeLine.style.width = time + "px";
+//         if (time > 549) {
+//             clearInterval(counterLine);
+//         }
+//     }
+// }
+
