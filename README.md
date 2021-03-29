@@ -159,3 +159,24 @@ Below you can find my wireframes:
 * Database to proper save and render user scores
 * Add different images for each questions
 * Implement difficulty to be choosen by users
+
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+## **Technologies used**
+<a></a>
+
+### **Languages**
+
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+<a></a>
+
+### **Libraries and Frameworks**
+
+* [Font Awesome](https://fontawesome.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Google Fonts](https://fonts.google.com/)
