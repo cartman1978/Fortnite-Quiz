@@ -81,31 +81,69 @@ const fetchData = (url) => {
     });
 }
 
+
+
 /**
  * Function to get questions from API and passes to the DOM
  */
-const fetchQuestions = fetchData('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple');
-fetchQuestions.then((data) => {
-    questions = data.results.map(fetchQuestions => {
-        const questionFormatted = {
-            question : fetchQuestions.question,
-        };
+// const fetchQuestions = fetchData('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple');
 
-        questionFormatted.answer = Math.floor(Math.random() * 3) + 1;
-        const answerChoices = [ ... fetchQuestions.incorrect_answers];
-        answerChoices.splice(questionFormatted.answer -1, 0, fetchQuestions.correct_answer);
 
-        answerChoices.forEach((choice, index) => {
-            questionFormatted['choice' + (index + 1)] = choice;
+
+// fetchQuestions.then((data) => {
+//     questions = data.results.map(fetchQuestions => {
+//         const questionFormatted = {
+//             question : fetchQuestions.question,
+//         };
+
+//         questionFormatted.answer = Math.floor(Math.random() * 3) + 1;
+//         const answerChoices = [ ... fetchQuestions.incorrect_answers];
+//         answerChoices.splice(questionFormatted.answer -1, 0, fetchQuestions.correct_answer);
+
+//         answerChoices.forEach((choice, index) => {
+//             questionFormatted['choice' + (index + 1)] = choice;
+//         });
+//         return questionFormatted;
+//         console.log(questionFormatted)
+//     });
+//     startGame();
+// }).catch(error => {
+//     errorText.innerHTML = `Arrr! It seems that your not lucky. Please try to refresh the page.`;
+//     console.log(error);
+// });
+
+
+fetch(
+        'https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple'
+    ).then((res) => {
+        return res.json();
+    })
+    .then((loadedQuestions) => {
+        questions = loadedQuestions.results.map((loadedQuestion) => {
+            const formattedQuestion = {
+                question: loadedQuestion.question,
+            };
+
+            const answerChoices = [...loadedQuestion.incorrect_answers];
+            formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+            answerChoices.splice(
+                formattedQuestion.answer - 1,
+                0,
+                loadedQuestion.correct_answer
+            );
+
+            answerChoices.forEach((choice, index) => {
+                formattedQuestion['choice' + (index + 1)] = choice;
+            });
+
+            return formattedQuestion;
         });
-        return questionFormatted;
-        console.log(questionFormatted)
+
+        startGame();
+    })
+    .catch((err) => {
+        console.error(err);
     });
-    startGame();
-}).catch(error => {
-    errorText.innerHTML = `Arrr! It seems that your not lucky. Please try to refresh the page.`;
-    console.log(error);
-});
 
 
 // Function to start the game
