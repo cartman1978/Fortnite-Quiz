@@ -8,9 +8,10 @@ const continueBtn = document.querySelector('#start');
 const quiz_box = document.querySelector('.quiz_box');
 const end_box = document.querySelector('#endBox');
 const timeCount = quiz_box.querySelector(".timer .timer_sec");
-const timeLine = quiz_box.querySelector(" header .time_line");
-const timeOff = quiz_box.querySelector(" header .time_text");
+const timeLine = quiz_box.querySelector("header .time_line");
+const timeOff = quiz_box.querySelector("header .time_text");
 const endMessage = document.querySelector('.endMessage');
+const errorText = document.querySelector('#error-text');
 const exitBtn = document.querySelector('#exit');
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choices'));
@@ -70,34 +71,40 @@ playGame.addEventListener('click', () => {
 
 
 let questions = [];
+
 // Fetching data from Trivia Api
-
-fetch('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple')
-    .then((res) => {
-        return res.json();
-    })
-    .then((loadedQuestions) => {
-        // questions = loadedQuestions;
-        console.log(loadedQuestions.results);
-        questions = loadedQuestions.results.map(loadedQuestions => {
-            const questionFormatted = {
-             question: loadedQuestions.question,
-            };
-
-            const answerChoices = [ ...loadedQuestions.incorrect_answers];
-            questionFormatted.answer = Math.floor(Math.random()*3) + 1;
-            answerChoices.splice(questionFormatted.answer -1, 0, loadedQuestions.correct_answer);
-
-            answerChoices.forEach((choice, index) => {
-                questionFormatted["choice" + (index + 1)] = choice;
-            })
-            return questionFormatted;
-        });
-        startGame();
-    })
-    .catch((err) => {
-        console.log(err);
+const fetchData = (url) => {
+    return fetch(url).then(res => res.json())
+    .catch(error => {
+        errorText.innerHTML = `Arrr! It seems that your not lucky. Please try to refresh the page.`;
+        console.log(error);
     });
+}
+
+/**
+ * Function to get questions from API and passes to the DOM
+ */
+const fetchQuestions = fetchData('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple');
+fetchQuestions.then((data) => {
+    questions = data.results.map(fetchQuestions => {
+        const questionFormatted = {
+            question : fetchQuestions.question,
+        };
+
+        questionFormatted.answer = Math.floor(Math.random() * 3) + 1;
+        const answerChoices = [ ... fetchQuestions.incorrect_answers];
+        answerChoices.splice(questionFormatted.answer -1, 0, fetchQuestions.correct_answer);
+
+        answerChoices.forEach((choice, index) => {
+            questionFormatted['choice' + (index + 1)] = choice;
+        });
+        return questionFormatted;
+    });
+    startGame();
+}).catch(error => {
+    errorText.innerHTML = `Arrr! It seems that your not lucky. Please try to refresh the page.`;
+    console.log(error);
+});
 
 
 // Function to start the game
