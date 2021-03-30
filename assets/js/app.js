@@ -99,6 +99,7 @@ fetchQuestions.then((data) => {
             questionFormatted['choice' + (index + 1)] = choice;
         });
         return questionFormatted;
+        console.log(questionFormatted)
     });
     startGame();
 }).catch(error => {
