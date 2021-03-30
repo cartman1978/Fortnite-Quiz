@@ -110,7 +110,6 @@ startGame = () => {
     clearInterval(counter);
     startTime(timeValue);
     clearInterval(counterLine);
-    // startTimerLine(widthValue);
     getNextQuestion();
     timeOff.textContent = "Time Left";
 }
@@ -170,6 +169,9 @@ const validateUserAnswer = () => {
                 scoreUp(bonusCorrectAnswer);
                 setTimeout(() => {
                     choiceSelected.classList.remove('correct');
+                     clearInterval(counter);
+                    clearInterval(counterLine);
+                    startTime(15);
                     getNextQuestion();
                 }, 1500);
             } else {
@@ -186,7 +188,6 @@ const validateUserAnswer = () => {
                     clearInterval(counter);
                     clearInterval(counterLine);
                     startTime(15);
-                    // startTimerLine(0);
                     getNextQuestion();
                 }, 1500);
             }
@@ -329,15 +330,4 @@ function startTime(time) {
    
 };
 
-// Function to start timeLine
-// function startTimerLine(time) {
-//     counterLine = setInterval(timer, 29);
-//     function timer() {
-//         time += 1;
-//         timeLine.style.width = time + "px";
-//         if (time > 549) {
-//             clearInterval(counterLine);
-//         }
-//     }
-// }
 
