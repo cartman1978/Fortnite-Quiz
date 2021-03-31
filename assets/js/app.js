@@ -176,7 +176,7 @@ getNextQuestion = () => {
         progressText.innerText = `${(questionCounter / maxQuestions) * 100 - 10}%`;
         progressFull.style.width = `${(questionCounter / maxQuestions) * 100 - 10}%`;
         currentQuestion = availableQuestions[questionIndex];
-        question.innerText = currentQuestion.question;
+        question.innerHTML = currentQuestion.question;
          
 
         choices.forEach(choice => {
