@@ -458,7 +458,7 @@ input {
 }
 
 
-#saveScore, #saveScore {
+#saveScore, #scoreSaved {
     color: var(--eminence);
     font-size: 1.5rem;
     font-weight: 700;
