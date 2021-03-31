@@ -4,7 +4,7 @@ if(document.body.animate) {
 
 function pop(e) {
     // Check if user click save button using keyboard
-    if (e.clientX === 0 && e.clientY ===0) {
+    if (e.clientX === 0 && e.clientY === 0) {
         const saveBtn = document.querySelector('#saveScoreBtn').getBoundingClientRect();
         const x = saveBtn.left + saveBtn.width / 2;
         const y = saveBtn.top + saveBtn.height / 2;
@@ -32,7 +32,7 @@ function createParticle(x, y) {
     // Calculate random size from 5px to 35px
     const size = Math.floor(Math.random() * 30 + 5);
     particle.style.width = `${size}px`;
-    particle.style.height = `${size}`;
+    particle.style.height = `${size}px`;
     // generate random color
     particle.style.background = `hsl(${Math.random() * 60 + 150}, 70%, 60%)`;
 
@@ -47,7 +47,7 @@ function createParticle(x, y) {
              * Set original position of the paticle
              * offset hla size of the particle width in order to center around the mouse
              */
-            transform: `translate(-50%, - 50%) translate(${x}px, ${y}px)`,
+            transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
             opacity: 1
         },
         {
