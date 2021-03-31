@@ -301,6 +301,7 @@ saveScoreBtn.addEventListener('click', (e) => {
     localStorage.setItem('userScore', JSON.stringify(userScore));
 
     saveScoreBtn.classList.add('hidden');
+    username.classList.add('hidden');
 })
     
 
