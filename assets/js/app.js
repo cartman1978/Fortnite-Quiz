@@ -21,6 +21,8 @@ const questionText = document.querySelector('.questionText');
 const progressFull = document.querySelector('#progressFull');
 const progressText = document.querySelector('#progressText');
 const gameSec = document.querySelector('#game-section');
+const scoreSaved = document.querySelector('#scoreSaved');
+const saveScore = document.querySelector('#saveScore');
 
 const btnContainer = document.querySelector('.btn-container');
 const rules = document.querySelector('#rules');
@@ -302,6 +304,8 @@ saveScoreBtn.addEventListener('click', (e) => {
 
     saveScoreBtn.classList.add('hidden');
     username.classList.add('hidden');
+    scoreSaved.classList.remove('hidden');
+    saveScore.classList.add('hidden');
 })
     
 
