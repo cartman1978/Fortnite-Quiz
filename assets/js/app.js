@@ -281,25 +281,8 @@ username.addEventListener('keyup', () => {
    saveScoreBtn.disabled = !username.value;
 });
 
-// saveScore = e => {
-//     console.log('score saved');
-//     e.preventDefault();
 
-//     const score = {
-//         score: mostRecentScore,
-//         name: username.value
-//     };
-//     // store more than one user score
-//     userScore.push(score);
-//     // function to sort score from highst to lowest
-//     userScore.sort((a,b) => b.score - a.score);
-//     // number of high score we want to store
-//     userScore.splice(5);
-//     // Save user scores in localstorage
-//     localStorage.setItem('userScore', JSON.stringify(userScore));
-    
-// }
-
+// Function to save user score
 saveScoreBtn.addEventListener('click', (e) => {
      console.log('score saved');
     e.preventDefault();
