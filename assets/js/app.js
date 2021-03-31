@@ -227,6 +227,7 @@ endGame = () => {
     end_box.classList.remove('hidden');
     btnContainer.classList.add('hidden');
     finalScore.innerText = score + " / " + totalScore;
+     
 
     if (score === (maxQuestions * bonusCorrectAnswer)) {
         endMessage.innerText = "Wow this is what I call perfection!";
@@ -255,9 +256,7 @@ playAgain.addEventListener('click', () => {
 // If exit button is clicked, return to home page
 
 exitBtn.addEventListener('click', () => {
-//    btnContainer.classList.remove('hidden');
-//    end_box.classList.add('hidden');
-   end_box.style.display = 'none';
+  end_box.style.display = 'none';
   btnContainer.style.display = 'block';
 });
 
@@ -329,11 +328,8 @@ function startTime(time) {
             
             let theAnswer = currentQuestion.answer;
             let answerToShow = document.querySelector(`[data-number="${theAnswer}"]`);
-            // answerToShow.classList.add('correct');
              clearInterval(counter);
-            //  clearInterval(counterLine);
              startTime(15);
-            //  startTimerLine(0);
              getNextQuestion();
         
          }
