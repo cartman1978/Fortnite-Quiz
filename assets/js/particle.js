@@ -29,8 +29,8 @@ function pop(e) {
 function createParticle(x, y) {
     const particle = document.createElement('particle');
     document.body.appendChild(particle);
-    // Calculate random size from 5px to 35px
-    const size = Math.floor(Math.random() * 30 + 5);
+    // Calculate random size from 5px to 20px
+    const size = Math.floor(Math.random() * 15 + 5);
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
     // generate random color
