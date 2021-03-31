@@ -86,64 +86,32 @@ const fetchData = (url) => {
 /**
  * Function to get questions from API and passes to the DOM
  */
-// const fetchQuestions = fetchData('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple');
+ const fetchQuestions = fetchData('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple');
 
 
 
-// fetchQuestions.then((data) => {
-//     questions = data.results.map(fetchQuestions => {
-//         const questionFormatted = {
-//             question : fetchQuestions.question,
-//         };
+fetchQuestions.then((data) => {
+    questions = data.results.map(fetchQuestions => {
+        const questionFormatted = {
+            question : fetchQuestions.question,
+        };
 
-//         questionFormatted.answer = Math.floor(Math.random() * 3) + 1;
-//         const answerChoices = [ ... fetchQuestions.incorrect_answers];
-//         answerChoices.splice(questionFormatted.answer -1, 0, fetchQuestions.correct_answer);
+        questionFormatted.answer = Math.floor(Math.random() * 3) + 1;
+        const answerChoices = [ ... fetchQuestions.incorrect_answers];
+        answerChoices.splice(questionFormatted.answer -1, 0, fetchQuestions.correct_answer);
 
-//         answerChoices.forEach((choice, index) => {
-//             questionFormatted['choice' + (index + 1)] = choice;
-//         });
-//         return questionFormatted;
-//         console.log(questionFormatted)
-//     });
-//     startGame();
-// }).catch(error => {
-//     errorText.innerHTML = `Arrr! It seems that your not lucky. Please try to refresh the page.`;
-//     console.log(error);
-// });
-
-
-fetch(
-        'https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple'
-    ).then((res) => {
-        return res.json();
-    })
-    .then((loadedQuestions) => {
-        questions = loadedQuestions.results.map((loadedQuestion) => {
-            const formattedQuestion = {
-                question: loadedQuestion.question,
-            };
-
-            const answerChoices = [...loadedQuestion.incorrect_answers];
-            formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
-            answerChoices.splice(
-                formattedQuestion.answer - 1,
-                0,
-                loadedQuestion.correct_answer
-            );
-
-            answerChoices.forEach((choice, index) => {
-                formattedQuestion['choice' + (index + 1)] = choice;
-            });
-
-            return formattedQuestion;
+        answerChoices.forEach((choice, index) => {
+            questionFormatted['choice' + (index + 1)] = choice;
         });
-
-        startGame();
-    })
-    .catch((err) => {
-        console.error(err);
+        return questionFormatted;
+        console.log(questionFormatted)
     });
+    startGame();
+}).catch(error => {
+    errorText.innerHTML = `Arrr! It seems that your not lucky. Please try to refresh the page.`;
+    console.log(error);
+});
+
 
 
 // Function to start the game
@@ -181,7 +149,7 @@ getNextQuestion = () => {
 
         choices.forEach(choice => {
             const number = choice.dataset.number;
-            choice.innerText = currentQuestion["choice" + number];
+            choice.innerHTML = currentQuestion["choice" + number];
         });
 
 
@@ -278,12 +246,9 @@ endGame = () => {
 
 playAgain.addEventListener('click', () => {
     end_box.classList.add('hidden');
-    quiz_box.classList.remove('hidden');
-     clearInterval(counter);
-    // clearInterval(counterLine);
-    startTime(15);
-    // startTimerLine(0);
-    startGame();
+    btnContainer.classList.remove('hidden');
+    location.reload();
+  
 });
 
 // When game is finish end box is displayed
