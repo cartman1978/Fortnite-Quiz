@@ -510,25 +510,42 @@ particle {
 
 /* Media queries mobile */
 @media screen and (max-width: 460px) {
+     
+    .start_btn, .info_container, .quiz_box, #endBox, #leader-board {
+        top: 50%;
+    }
     .quiz_box {
         width: 330px;
     }
 
     .quiz_box header .timer {
         margin-right: -2rem;
+        margin-top: -5rem;
     }
 
     #question {
         font-size: 1.5rem;
+        margin-top: -2rem;
     }
 
     header .title {
     font-size: 1.5rem;
+    margin-top: -5rem;
 }
 
 .option_list {
     margin: 0.2rem 0;
 }
+ .score_box {
+     font-size: 1rem;
+ }
+ .score_text {
+     width: 10rem;
+ }
+
+ .quiz_box header .time_line {
+     top: 6.5rem;
+ }
 }
 
 /* Media queries for Tablet */
