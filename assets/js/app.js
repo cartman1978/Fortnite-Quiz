@@ -8,7 +8,8 @@ const quitBtn = document.querySelector('#quit');
 const continueBtn = document.querySelector('#start');
 // const quiz_box = document.querySelector('.quiz_box');
 const quizBoxRef = document.querySelector('.quiz_box');
-const end_box = document.querySelector('#endBox');
+// const end_box = document.querySelector('#endBox');
+const endBoxRef = document.querySelector('#endBox');
 const timeCount = quizBoxRef.querySelector(".timer .timer_sec");
 const timeLine = quizBoxRef.querySelector("header .time_line");
 const timeOff = quizBoxRef.querySelector("header .time_text");
@@ -228,7 +229,7 @@ const scoreUp = num => {
 endGame = () => {
     const totalScore = maxQuestions * bonusCorrectAnswer;
     gameSec.classList.add('hidden');
-    end_box.classList.remove('hidden');
+    endBoxRef.classList.remove('hidden');
     btnContainer.classList.add('hidden');
     finalScore.innerText = score + " / " + totalScore;
      
@@ -250,7 +251,7 @@ endGame = () => {
 // If Play again button is clicked, show game_box and restart the game
 
 playAgain.addEventListener('click', () => {
-    end_box.classList.add('hidden');
+    endBoxRef.classList.add('hidden');
     btnContainer.classList.remove('hidden');
     location.reload();
   
@@ -260,7 +261,7 @@ playAgain.addEventListener('click', () => {
 // If exit button is clicked, return to home page
 
 exitBtn.addEventListener('click', () => {
-  end_box.style.display = 'none';
+  endBoxRef.style.display = 'none';
   btnContainer.style.display = 'block';
 });
 
