@@ -403,6 +403,8 @@ header .title {
 
  #finalScore {
      color: rgb(195, 236, 133);
+     font-size: 1.9rem;
+     font-weight: 700;
  }
 
  .buttonsEnd {
@@ -460,7 +462,7 @@ input {
 
 #saveScore, #scoreSaved {
     color: var(--eminence);
-    font-size: 1.5rem;
+    font-size: 2.1rem;
     font-weight: 700;
 }
 
