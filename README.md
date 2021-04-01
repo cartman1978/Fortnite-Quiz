@@ -192,3 +192,17 @@ Below you can find my wireframes:
 [Back to Top](#table-of-contents)
 
 <a></a>
+
+## **Testing**
+---
+<a></a>
+
+## Game Rules
+#### User story: As a user, I would like to know the rules of the game before playing.
+
+* **Plan**  
+After the page is loaded, the user should have the option to click a button 'Quiz Rules' when they can read more about rules in place for this game.
+
+* **Implementation**  
+Adding an extra button when page is loaded with 'Quiz Rules'
+

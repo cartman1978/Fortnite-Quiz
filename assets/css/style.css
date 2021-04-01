@@ -62,7 +62,7 @@ body {
     }
 }
 
-.start_btn, .info_container, .quizBox, #endBox, #leader-board {
+.start_btn, .infoContainer, .quizBox, #endBox, #leader-board {
     position: absolute;
     top: 60%;
     left: 50%;
@@ -112,7 +112,7 @@ body {
     color: var(--white);
 }
 
-.info_container {
+.infoContainer {
     width: 35rem;
     height: 45rem;
     background: var(--white);
@@ -120,11 +120,11 @@ body {
     transform: translate(-50%, -50%) scale(0.9);
 }
 
-.info_list {
+.infoList {
     height: 30rem;
 }
 
-.info_container .info_title {
+.infoContainer .infoTitle {
     height: 6rem;
     width: 100%;
     border-bottom: 1px solid var(--telemagenta);
@@ -135,17 +135,17 @@ body {
     font-weight: 700;
 }
 
-.info_container .info_list .info {
+.infoContainer .infoList .info {
     margin: 0.5rem 0;
     font-size: 1.5rem;
 }
 
-.info_container .info_list .info span {
+.infoContainer .infoList .info span {
     font-weight: 700;
     color: var(--telemagenta);
 }
 
-.info_container .buttons {
+.infoContainer .buttons {
     height: 5rem;
     display: flex;
     align-items: center;
@@ -154,7 +154,7 @@ body {
     border-top: 1px solid var(--telemagenta);
 }
 
-.info_container #quit {
+.infoContainer #quit {
     margin: 0 0.2rem;
     height: 3rem;
     outline: none;
@@ -167,7 +167,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.info_container #start {
+.infoContainer #start {
     margin: 0 0.2rem;
     height: 4rem;
     outline: none;
@@ -515,7 +515,7 @@ particle {
 /* Media queries mobile */
 @media screen and (max-width: 460px) {
      
-    .start_btn, .info_container, .quizBox, #endBox, #leader-board {
+    .start_btn, .infoContainer, .quizBox, #endBox, #leader-board {
         top: 50%;
     }
     .quizBox {
@@ -554,7 +554,7 @@ particle {
 
 /* Media queries for Tablet */
 @media screen and (min-width: 768px) {
-    .start_btn, .info_container, .quizBox, #endBox, #leader-board {
+    .start_btn, .infoContainer, .quizBox, #endBox, #leader-board {
         top: 52%;
     }
     .quizBox header .timer {
@@ -566,7 +566,7 @@ particle {
    #main-title {
        margin-top: -13rem;
    }
-   .start_btn, .info_container, .quizBox, #endBox, #leader-board {
+   .start_btn, .infoContainer, .quizBox, #endBox, #leader-board {
         top: 43%;
     }
 }
