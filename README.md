@@ -180,3 +180,15 @@ Below you can find my wireframes:
 * [Font Awesome](https://fontawesome.com/)
 * [Bootstrap](https://getbootstrap.com/)
 * [Google Fonts](https://fonts.google.com/)
+* [Particle.js](https://vincentgarreau.com/particles.js/)
+
+### **Tools**
+* [GitPod](https://www.gitpod.io/)
+* [Balsamic](https://balsamiq.com/wireframes/)
+* [W3C HTML Validator](https://validator.w3.org/) 
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+* [Open Trivia Database](https://opentdb.com/)
+
+[Back to Top](#table-of-contents)
+
+<a></a>
