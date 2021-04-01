@@ -1,17 +1,14 @@
 // getting all the elements
 
-// const start_btn = document.querySelector('.start_btn button');
-// const info_container = document.querySelector('#info-container');
+
 const infoContainerRef = document.querySelector('#info-container');
 const startButton = document.querySelector('#startButton');
 const quitBtn = document.querySelector('#quit');
 const continueBtn = document.querySelector('#start');
-// const quiz_box = document.querySelector('.quiz_box');
 const quizBoxRef = document.querySelector('.quiz_box');
-// const end_box = document.querySelector('#endBox');
 const endBoxRef = document.querySelector('#endBox');
 const timeCount = quizBoxRef.querySelector(".timer .timerSec");
-const timeLine = quizBoxRef.querySelector("header .time_line");
+const timeLine = quizBoxRef.querySelector("header .timeLine");
 const timeOff = quizBoxRef.querySelector("header .timeText");
 const endMessage = document.querySelector('.endMessage');
 const errorText = document.querySelector('#error-text');
@@ -27,7 +24,7 @@ const gameSec = document.querySelector('#game-section');
 const scoreSaved = document.querySelector('#scoreSaved');
 const saveScore = document.querySelector('#saveScore');
 
-const btnContainer = document.querySelector('.btn-container');
+const btnContainer = document.querySelector('.btnContainer');
 const rules = document.querySelector('#rules');
 const playGame = document.querySelector('#playGame');
 
@@ -40,7 +37,7 @@ const username = document.querySelector('#username');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 const scoreList = document.querySelector('#scoreList');
 const userScore = JSON.parse(localStorage.getItem("userScore")) || [];
-// const max_high_score = 5;
+
 console.log(userScore);
 
 let currentQuestion = {};

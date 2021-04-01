@@ -76,7 +76,7 @@ body {
     display: none;
 }
 
-.btn-container {
+.btnContainer {
     text-align: center;
     margin-top: 15rem;
 }
@@ -247,7 +247,7 @@ header .title {
     user-select: none;
 }
 
-.quiz_box header .time_line {
+.quiz_box header .timeLine {
     position: absolute;
     top: 10rem;
     left: 0;
@@ -543,7 +543,7 @@ particle {
      width: 10rem;
  }
 
- .quiz_box header .time_line {
+ .quiz_box header .timeLine {
      top: 6.5rem;
  }
 }
