@@ -70,24 +70,23 @@
         <div id="loader"></div>
 
         <h2 id="question"></h2>
-        <div class="col-12">
-            <div class="row p-3">
-                <div class="option_list col-12">
+        
+                <section>
+                <div class="option_list">
                     <p class="choices" data-number="1"></p>
                 </div>
-                <div class="option_list col-12">
+                <div class="option_list">
                     <p class="choices" data-number="2"></p>
                 </div>
-                <div class="option_list col-12">
+                <div class="option_list">
                     <p class="choices" data-number="3"></p>
                 </div>
-                <div class="option_list col-12">
+                <div class="option_list">
                     <p class="choices" data-number="4"></p>
                 </div>
+                </section>
 
-            </div>
-        </div>
-
+       
         <!-- Question Counter -->
 
         <div class="question_count">
@@ -111,7 +110,7 @@
     </div>
 
     <!-- End game message -->
-    <div id="endBox" class="end_box col-12 hidden">
+    <div id="endBox" class="end_box hidden">
         <p class="endMessage"></p>
         <p id="totalScore">Your Score is: <span id="finalScore"></span></p>
          <p id="saveScore">Save your score</p>
@@ -135,7 +134,7 @@
     </div>
 
      <!-- LeaderBoard Score -->
-    <div class="leaderboard col-12 hidden" id="leader-board">
+    <div class="leaderboard hidden" id="leader-board">
         <h1 class="text-center" id="score-title">Top Scores</h1>
         <ul id="scoreList"></ul>
          <a href="#game-section" id="exitLeader" class="buttons" aria-label="exit">Exit</a>
