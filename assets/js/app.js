@@ -1,15 +1,17 @@
 // getting all the elements
 
-const start_btn = document.querySelector('.start_btn button');
-const info_container = document.querySelector('#info-container');
+// const start_btn = document.querySelector('.start_btn button');
+// const info_container = document.querySelector('#info-container');
+const infoContainerRef = document.querySelector('#info-container');
 const startButton = document.querySelector('#startButton');
 const quitBtn = document.querySelector('#quit');
 const continueBtn = document.querySelector('#start');
-const quiz_box = document.querySelector('.quiz_box');
+// const quiz_box = document.querySelector('.quiz_box');
+const quizBoxRef = document.querySelector('.quiz_box');
 const end_box = document.querySelector('#endBox');
-const timeCount = quiz_box.querySelector(".timer .timer_sec");
-const timeLine = quiz_box.querySelector("header .time_line");
-const timeOff = quiz_box.querySelector("header .time_text");
+const timeCount = quizBoxRef.querySelector(".timer .timer_sec");
+const timeLine = quizBoxRef.querySelector("header .time_line");
+const timeOff = quizBoxRef.querySelector("header .time_text");
 const endMessage = document.querySelector('.endMessage');
 const errorText = document.querySelector('#error-text');
 const exitBtn = document.querySelector('#exit');
@@ -56,18 +58,18 @@ let que_num = 1;
 // If Quiz rule button is clicked
 rules.addEventListener('click', () => {
     btnContainer.classList.add('hidden');
-    info_container.style.display = "inline-block";
+    infoContainerRef.style.display = "inline-block";
 });
 
 //If Continue OK is clicked, remove info box and diplay buttons again
 continueBtn.addEventListener('click', () => {
-    info_container.style.display = "none";
+    infoContainerRef.style.display = "none";
     btnContainer.classList.remove('hidden');
 });
 
 //  If Play Quiz button is clicked, show 
 playGame.addEventListener('click', () => {
-    quiz_box.classList.remove('hidden');
+    quizBoxRef.classList.remove('hidden');
     startGame();
 });
 
