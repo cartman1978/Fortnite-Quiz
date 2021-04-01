@@ -25,7 +25,7 @@ const scoreSaved = document.querySelector('#scoreSaved');
 const saveScore = document.querySelector('#saveScore');
 
 const btnContainer = document.querySelector('.btnContainer');
-const rules = document.querySelector('#rules');
+const rulesContainerRef = document.querySelector('#rules');
 const playGame = document.querySelector('#playGame');
 
 const playAgain = document.querySelector('#play-again');
@@ -54,7 +54,7 @@ let widthValue = 0;
 let queNum = 1;
 
 // If Quiz rule button is clicked
-rules.addEventListener('click', () => {
+rulesContainerRef.addEventListener('click', () => {
     btnContainer.classList.add('hidden');
     infoContainerRef.style.display = "inline-block";
 });
