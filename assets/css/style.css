@@ -228,13 +228,13 @@ header .title {
     
 }
 
-.quiz_box header .timer .time_text {
+.quiz_box header .timer .timeText {
     font-weight: 400;
     font-size: 1rem;
     user-select: none;
 }
 
-.quiz_box header .timer .timer_sec {
+.quiz_box header .timer .timerSec {
     font-size: 1.5rem;
     font-weight: 700;
     background: var(--eminence);

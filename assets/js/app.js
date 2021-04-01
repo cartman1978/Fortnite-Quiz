@@ -10,9 +10,9 @@ const continueBtn = document.querySelector('#start');
 const quizBoxRef = document.querySelector('.quiz_box');
 // const end_box = document.querySelector('#endBox');
 const endBoxRef = document.querySelector('#endBox');
-const timeCount = quizBoxRef.querySelector(".timer .timer_sec");
+const timeCount = quizBoxRef.querySelector(".timer .timerSec");
 const timeLine = quizBoxRef.querySelector("header .time_line");
-const timeOff = quizBoxRef.querySelector("header .time_text");
+const timeOff = quizBoxRef.querySelector("header .timeText");
 const endMessage = document.querySelector('.endMessage');
 const errorText = document.querySelector('#error-text');
 const exitBtn = document.querySelector('#exit');
@@ -54,7 +54,7 @@ let counter;
 let counterLine;
 let timeValue = 15;
 let widthValue = 0;
-let que_num = 1;
+let queNum = 1;
 
 // If Quiz rule button is clicked
 rules.addEventListener('click', () => {
