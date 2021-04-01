@@ -164,13 +164,14 @@ getNextQuestion = () => {
 };
 
 
-
-//   Validate user selected answer 
-//  if answer is correct, selected answer will highlight green
-//  if answer is incorrect, selected answer will highlight red
+/**
+ * Validate user selected answer 
+ * if answer is correct, selected answer will highlight green
+ *  if answer is incorrect, selected answer will highlight red
+ */
 const validateUserAnswer = () => {
-    choices.forEach(choice => {
-        choice.addEventListener('click', event => {
+    choices.forEach((choice) => {
+        choice.addEventListener('click', (event) => {
 
             const choiceSelected = event.target;
             const answerSelected = choiceSelected.dataset.number;
