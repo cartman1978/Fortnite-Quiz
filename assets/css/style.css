@@ -566,6 +566,9 @@ particle {
    #main-title {
        margin-top: -13rem;
    }
+   .start_btn, .info_container, .quizBox, #endBox, #leader-board {
+        top: 43%;
+    }
 }
 
 
