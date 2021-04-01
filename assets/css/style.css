@@ -550,6 +550,9 @@ particle {
 
 /* Media queries for Tablet */
 @media screen and (min-width: 768px) {
+    .start_btn, .info_container, .quiz_box, #endBox, #leader-board {
+        top: 53%;
+    }
     .quiz_box header .timer {
         margin-right: -2rem;
     }
