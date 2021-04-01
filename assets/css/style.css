@@ -393,6 +393,7 @@ header .title {
      margin-top: 3rem;
      font-size: 1.8rem;
      margin-bottom: 8rem;
+     padding: 1rem;
  }
 
  #play-again, #exit, #exitLeader {
@@ -413,9 +414,10 @@ header .title {
  }
 
  .buttonsEnd {
-     margin-top: 5rem;
+     margin-top: 4rem;
      display: flex;
      justify-content: space-between;
+     padding: 1rem;
  }
 
  form {
@@ -469,6 +471,8 @@ input {
     color: var(--eminence);
     font-size: 2.1rem;
     font-weight: 700;
+    margin-top: -5rem;
+    padding: 1rem;
 }
 
 /* LidearBoard box */
