@@ -49,6 +49,10 @@ body {
     animation-fill-mode: forwards;
 }
 
+#main-title {
+    font-size: 3rem;
+}
+
 @keyframes fall {
     from {
         top: 0px;
