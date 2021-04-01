@@ -62,7 +62,7 @@ body {
     }
 }
 
-.start_btn, .info_container, .quiz_box, #endBox, #leader-board {
+.start_btn, .info_container, .quizBox, #endBox, #leader-board {
     position: absolute;
     top: 60%;
     left: 50%;
@@ -215,7 +215,7 @@ header .title {
     font-weight: 600;
 }
 
-.quiz_box header .timer {
+.quizBox header .timer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -228,13 +228,13 @@ header .title {
     
 }
 
-.quiz_box header .timer .timeText {
+.quizBox header .timer .timeText {
     font-weight: 400;
     font-size: 1rem;
     user-select: none;
 }
 
-.quiz_box header .timer .timerSec {
+.quizBox header .timer .timerSec {
     font-size: 1.5rem;
     font-weight: 700;
     background: var(--eminence);
@@ -247,7 +247,7 @@ header .title {
     user-select: none;
 }
 
-.quiz_box header .timeLine {
+.quizBox header .timeLine {
     position: absolute;
     top: 10rem;
     left: 0;
@@ -257,7 +257,7 @@ header .title {
     box-shadow: 0px 3px 5px 1px var(--eminence);
 }
 
-.quiz_box {
+.quizBox {
     width: 550px;
     border-radius: 1rem;
     margin: auto;
@@ -511,14 +511,14 @@ particle {
 /* Media queries mobile */
 @media screen and (max-width: 460px) {
      
-    .start_btn, .info_container, .quiz_box, #endBox, #leader-board {
+    .start_btn, .info_container, .quizBox, #endBox, #leader-board {
         top: 50%;
     }
-    .quiz_box {
+    .quizBox {
         width: 330px;
     }
 
-    .quiz_box header .timer {
+    .quizBox header .timer {
         margin-right: -2rem;
         margin-top: -5rem;
     }
@@ -543,17 +543,17 @@ particle {
      width: 10rem;
  }
 
- .quiz_box header .timeLine {
+ .quizBox header .timeLine {
      top: 6.5rem;
  }
 }
 
 /* Media queries for Tablet */
 @media screen and (min-width: 768px) {
-    .start_btn, .info_container, .quiz_box, #endBox, #leader-board {
+    .start_btn, .info_container, .quizBox, #endBox, #leader-board {
         top: 53%;
     }
-    .quiz_box header .timer {
+    .quizBox header .timer {
         margin-right: -2rem;
     }
 }
