@@ -206,7 +206,7 @@ const validateUserAnswer = () => {
                     clearInterval(counterLine);
                     startTime(15);
                     getNextQuestion();
-                }, 1500);
+                }, 2500);
             }
 
         });
