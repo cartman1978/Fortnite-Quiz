@@ -269,3 +269,21 @@ Progress bar works as planned across various devices and browsers.
 
 * **Verdict**  
 The test has passed all the criteria and works like planned.
+
+## Play Again
+#### User story: As a user, I want to be able to restart the game once is over.
+
+* **Plan** 
+When the game is over an end message is displayed with the  score user got. I want to show different option to the user and one of this option is to click a button to play the game again so that if is clicked will take the user to the home page.
+
+* **Implementation**  
+Displayed a button in the end message container, added an event listener in JavaScript to trigger the button when is clicked to take back the user to the home page. On the home page user cna than click 'play quiz' to restart the game.
+
+* **Test**  
+I have tested on various devices to make sure it works as expected, on mobile at the first test the play agian button was to close to other buttons and it wasn't easy for the user to spot. I added more margin and also give a different color.
+
+* **Result**  
+Play again button works as planned across various devices and browsers.
+
+* **Verdict**  
+The test has passed all the criteria and works like planned.
