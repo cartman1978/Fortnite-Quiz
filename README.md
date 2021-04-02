@@ -204,5 +204,14 @@ Below you can find my wireframes:
 After the page is loaded, the user should have the option to click a button 'Quiz Rules' when they can read more about rules in place for this game.
 
 * **Implementation**  
-Adding an extra button when page is loaded with 'Quiz Rules'
+Adding an extra button when page is loaded with 'Quiz Rules' that triggers a container. In the container there 5 rules in place written and another button that says OK . 
+When the  button Ok is clicked the container is closed and return to main page where user can start the game or reade rules once more.
 
+* **Test**  
+The container have been tested on various browsers and devices. Only when the user clicks the OK button will be able to go back to the main page and start the game.
+
+* **Result**  
+Container works as planned and makes overall user experience much better.
+
+* **Verdict**  
+Test passed all the criteria and works as planned.
