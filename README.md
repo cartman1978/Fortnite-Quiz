@@ -215,3 +215,21 @@ Container works as planned and makes overall user experience much better.
 
 * **Verdict**  
 Test passed all the criteria and works as planned.
+
+## Timer
+#### User story: As a user, I would like to know how many time left I have to answer the question.
+
+* **Plan**  
+When the game starts, user should be able to see a countdown timer that tells how many seconds left they have to answer the question. When gets to nexts question timer reset.
+
+* **Implementation**  
+Adding a function in app.js, the function startTime() execute as soon as the user get the question. The setInterval() method in Javascript calls a function or evaluates an expression after the specified number of milliseconds (in my case 1000), and time decrementing.
+
+* **Test**  
+I tested the timer by playing the game from first to last question to make sure it works as planned. During the first test I discovered that timer didn't restart when user answer was correct, and I realized that I didn't pass clearInterval() and startTime() inside setTimeout when validating user selected answer.
+
+* **Result**  
+Timer works as planned across various devices and browsers.
+
+* **Verdict**  
+The test has passed all the criteria and works like planned.
