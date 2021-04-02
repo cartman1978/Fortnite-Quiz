@@ -251,3 +251,21 @@ Answer validation is working as expected and is more user friendly due to the fu
 
 * **Verdict**  
 The test has passed all the criteria and works like planned.
+
+## Question Counter
+#### User story: As a user, I want to know where I am in the game, to know how many questions I still have left.
+
+* **Plan** 
+The original plan was to have question counter display with numbers underneath the 4 question to the left side. After the firt testing I decide to change it with a progress bar which updates every next questions and shows what percentages user is on the game. The reason for this change is that it looks better in terms of user experience.
+
+* **Implementation**  
+I added to extra div in index.html, one it works ad a container and the other shows progress bar when user goes to next question. There is an innerHTML which add  width in the nexQuestion function. The percentage is than calculate to show the current position. The progress bar starts at 0% and it moves 10% up for each question.
+
+* **Test**  
+I have tested the progress bar across different devices and browers to make sure it works accordingly. Progress bar is reacts responsive and for me it has a better result for user experience.
+
+* **Result**  
+Progress bar works as planned across various devices and browsers.
+
+* **Verdict**  
+The test has passed all the criteria and works like planned.
