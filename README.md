@@ -287,3 +287,21 @@ Play again button works as planned across various devices and browsers.
 
 * **Verdict**  
 The test has passed all the criteria and works like planned.
+
+## Save Score
+#### User story: As a user, I want to be able to save my score.
+
+* **Plan** 
+Once the game is over user will see end game message with a personalised message depending on the final score that the user got. After the score results I want the user to be able to see 'save your score' message with an input and underneath then input, a Save button.
+
+* **Implementation**
+Displayed a button 'Save' with the input where user can type is name, the button is disabled until user start to type in, this is achieved adding 'keyup' enent in Javascript. In app.js I then added push object to array in order to store more than one user score and sort method to show scores from highest to lowest. I used localStorage setItem method to  update that key's value.
+
+* **Test**  
+I have tested on various devices to make sure it works as expected, I discovered that the score number was dispalyed as null value, I realized that I didn't pass correct properties to the score object, to fix it I passed mostRecentScore to it.
+
+* **Result**  
+Save score button works as planned across various devices and browsers.
+
+* **Verdict**  
+The test has passed all the criteria and works like planned.
