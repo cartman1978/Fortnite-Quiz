@@ -233,3 +233,21 @@ Timer works as planned across various devices and browsers.
 
 * **Verdict**  
 The test has passed all the criteria and works like planned.
+
+## Answer validation 
+#### User story: As a user, I would like to know the correct answer when answered incorrectly.
+
+* **Plan** 
+When user select correct answer, the choice should highlight in a shine green color. In the other hand when answer in incorrect, the choice should highlight in red color.
+
+* **Implementation**  
+Adding a function in app.js which validates user answer and add classes in order to highlight relevant choice. I added a setTimeout function to make sure that user has sufficient time to see if the asnwer is correct or not.
+
+* **Test**  
+I tested the answer validation across various devices and browers to make sure it works as planned. When testing on mobile scrren I realized that the higlighted choices size was too small and a gap was visible, I had to resize the classes correct and incorrect to fix it.
+
+* **Result**  
+Answer validation is working as expected and is more user friendly due to the full game being displayed on the screen on small devices.
+
+* **Verdict**  
+The test has passed all the criteria and works like planned.
