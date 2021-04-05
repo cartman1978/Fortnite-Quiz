@@ -346,4 +346,11 @@ Updated the innerText to innerHTML in game.js
 * **Verdict**  
 Questions are now showing nicely as expected. Bug fixed.
 
+[Back to Top](#table-of-contents)
 
+
+<a></a>
+
+## **Deployment**
+---
+<a></a>
