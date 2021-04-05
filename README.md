@@ -324,3 +324,26 @@ At the end of the conditional statment inside validateUserAnswer I had to pass c
 
 * **Verdict**  
 When answer a question getnextquestion is activated and timer restart at 15 seconds as planned. Bug resolved. 
+
+Questions repeat when play again
+
+* **Bug**  
+After finish the game and play again button is clicked I get the same question from previous game.
+
+* **Fix**   
+At the end of playAgain event i added Location reload() method in order to reload the current document.
+
+* **Verdict**  
+When I finish the game and click on Play Again button I get new questions as the page is reloading. Bug resolved.
+
+Question and answer showing with double quotes and other unwanted characters
+* **Bug**  
+When fetching questions from the API it returns with % sign and &.
+
+* **Fix**  
+Updated the innerText to innerHTML in game.js
+
+* **Verdict**  
+Questions are now showing nicely as expected. Bug fixed.
+
+
