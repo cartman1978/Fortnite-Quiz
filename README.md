@@ -354,3 +354,12 @@ Questions are now showing nicely as expected. Bug fixed.
 ## **Deployment**
 ---
 <a></a>
+
+I created this project using GitHub, from there I used [GitPod](https://www.gitpod.io/) to write my code.  Then I used commits to git followed by "git push" to my GitHub repository.
+
+Steps:
+
+* Navigate to the repository on GitHub and click **Settings**.
+* Go to the **Source section** within the GitHub Pages section.
+* On the dropdown menu select **master branch** and click save.
+* Now your website is live on:
