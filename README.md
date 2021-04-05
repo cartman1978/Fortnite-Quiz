@@ -4,7 +4,7 @@
 
 Welcome to Video Game Quizzes !
 
-Are you a videogamer and you looking to test your gaming knowledge ?
+Are you a video gamer and you looking to test your gaming knowledge ?
 So let's get started and have fun!
 
 Thank you for visiting my project!
@@ -43,7 +43,7 @@ If you have any feedback or questions, head over to my GitHub contact details an
 <a></a>
 ### **User Goals**
 
-* The game has to be repsonsive for all the devices sizes like tablets, phones and desktops
+* The game has to be responsive for all the devices sizes like tablets, phones and desktops
 * Display feedback for correct/incorrect answers
 * Display a visual progress bar to track user's progress through the questions
 * During the game track the number of questions 
@@ -59,7 +59,7 @@ If you have any feedback or questions, head over to my GitHub contact details an
 * As a user, I would like to know the correct answer when answered incorrectly.
 * As a user, I expect that the game has a nice visually appealing lay out to be in line with the game.
 * As a user, I expect a variety of questions so no questions get repeated.
-* As a user, I would like to learn new things about Videogames while I'm playing the game.
+* As a user, I would like to learn new things about Video games while I'm playing the game.
 * As a user, I want to know where I am in the game, to know how many questions I still have left.
 * As a user, I want to be able to restart the game once is over.
 * As a user, I want to be able to save my score.
@@ -68,7 +68,7 @@ If you have any feedback or questions, head over to my GitHub contact details an
 <a></a>
 
 ### **Site owners Goals**
-* To have an appealing website where users want to go to Test their Videogame knowledge.
+* To have an appealing website where users want to go to Test their Video game knowledge.
 * For the users to have fun while playing my game.
 
 
@@ -90,15 +90,15 @@ If you have any feedback or questions, head over to my GitHub contact details an
 * To let the user know if their answer was correct or wrong
 * Show correct answer when answered incorrectly
 * To show the final result after playing
-* Show a personalised message with funny iamge after completing the game 
+* Show a personalized message with funny image after completing the game 
 
 [Back to Top](#table-of-contents)
 
 <a></a>
 ### **Design Choices**
 
-I have used [Coolors](https://coolors.co/ "Coolors.co") to create a color scheme that matches the atmosphere of playing Fortnite Game.
-The design choosed is simple but I would like to create cool and animated background.
+I have used [Coolors](https://coolors.co/ "Coolors.co") to create a color scheme that matches the atmosphere.
+The design choose is simple but I would like to create cool and animated background.
 
 <a></a>
 #### Fonts
@@ -113,8 +113,8 @@ I have decide to use some colors that reminds the background image used.
 
 * Color #D12D6F is used for some buttons, progression bar and the endgame container.
 * Color #E05A5C is used for main game box container.
-* Colot #7A2D8D is used for the 4 possible answers to the questions.
-* Colot #fff is used for all the text and headings. 
+* Color #7A2D8D is used for the 4 possible answers to the questions.
+* Color #fff is used for all the text and headings. 
 
 ![Color Palette](wireframes/videogame-color.png)
 
@@ -152,13 +152,13 @@ Below you can find my wireframes:
 * Score update while user is playing
 * Personal message when game is over depending on the   final score
 * User score can be saved in local storage 
-* Leaderboard with top 5 scores
+* Leader board with top 5 scores
 
 <a></a>
 ### **Features to be implemented**
 * Database to proper save and render user scores
 * Add different images for each questions
-* Implement difficulty to be choosen by users
+* Implement difficulty to be choose by users
 
 [Back to Top](#table-of-contents)
 
@@ -205,7 +205,7 @@ After the page is loaded, the user should have the option to click a button 'Qui
 
 * **Implementation**  
 Adding an extra button when page is loaded with 'Quiz Rules' that triggers a container. In the container there 5 rules in place written and another button that says OK . 
-When the  button Ok is clicked the container is closed and return to main page where user can start the game or reade rules once more.
+When the  button Ok is clicked the container is closed and return to main page where user can start the game or read rules once more.
 
 * **Test**  
 The container have been tested on various browsers and devices. Only when the user clicks the OK button will be able to go back to the main page and start the game.
@@ -220,7 +220,7 @@ Test passed all the criteria and works as planned.
 #### User story: As a user, I would like to know how many time left I have to answer the question.
 
 * **Plan**  
-When the game starts, user should be able to see a countdown timer that tells how many seconds left they have to answer the question. When gets to nexts question timer reset.
+When the game starts, user should be able to see a countdown timer that tells how many seconds left they have to answer the question. When gets to next question timer reset.
 
 * **Implementation**  
 Adding a function in app.js, the function startTime() execute as soon as the user get the question. The setInterval() method in Javascript calls a function or evaluates an expression after the specified number of milliseconds (in my case 1000), and time decrementing.
@@ -244,7 +244,7 @@ When user select correct answer, the choice should highlight in a shine green co
 Adding a function in app.js which validates user answer and add classes in order to highlight relevant choice. I added a setTimeout function to make sure that user has sufficient time to see if the asnwer is correct or not.
 
 * **Test**  
-I tested the answer validation across various devices and browers to make sure it works as planned. When testing on mobile scrren I realized that the higlighted choices size was too small and a gap was visible, I had to resize the classes correct and incorrect to fix it.
+I tested the answer validation across various devices and browsers to make sure it works as planned. When testing on mobile scrren I realized that the highlighted choices size was too small and a gap was visible, I had to resize the classes correct and incorrect to fix it.
 
 * **Result**  
 Answer validation is working as expected and is more user friendly due to the full game being displayed on the screen on small devices.
@@ -256,13 +256,13 @@ The test has passed all the criteria and works like planned.
 #### User story: As a user, I want to know where I am in the game, to know how many questions I still have left.
 
 * **Plan** 
-The original plan was to have question counter display with numbers underneath the 4 question to the left side. After the firt testing I decide to change it with a progress bar which updates every next questions and shows what percentages user is on the game. The reason for this change is that it looks better in terms of user experience.
+The original plan was to have question counter display with numbers underneath the 4 question to the left side. After the first testing I decide to change it with a progress bar which updates every next questions and shows what percentages user is on the game. The reason for this change is that it looks better in terms of user experience.
 
 * **Implementation**  
-I added to extra div in index.html, one it works ad a container and the other shows progress bar when user goes to next question. There is an innerHTML which add  width in the nexQuestion function. The percentage is than calculate to show the current position. The progress bar starts at 0% and it moves 10% up for each question.
+I added to extra div in index.html, one it works ad a container and the other shows progress bar when user goes to next question. There is an innerHTML which add  width in the nextQuestion function. The percentage is than calculate to show the current position. The progress bar starts at 0% and it moves 10% up for each question.
 
 * **Test**  
-I have tested the progress bar across different devices and browers to make sure it works accordingly. Progress bar is reacts responsive and for me it has a better result for user experience.
+I have tested the progress bar across different devices and browsers to make sure it works accordingly. Progress bar is reacts responsive and for me it has a better result for user experience.
 
 * **Result**  
 Progress bar works as planned across various devices and browsers.
@@ -277,10 +277,10 @@ The test has passed all the criteria and works like planned.
 When the game is over an end message is displayed with the  score user got. I want to show different option to the user and one of this option is to click a button to play the game again so that if is clicked will take the user to the home page.
 
 * **Implementation**  
-Displayed a button in the end message container, added an event listener in JavaScript to trigger the button when is clicked to take back the user to the home page. On the home page user cna than click 'play quiz' to restart the game.
+Displayed a button in the end message container, added an event listener in JavaScript to trigger the button when is clicked to take back the user to the home page. On the home page user can than click 'play quiz' to restart the game.
 
 * **Test**  
-I have tested on various devices to make sure it works as expected, on mobile at the first test the play agian button was to close to other buttons and it wasn't easy for the user to spot. I added more margin and also give a different color.
+I have tested on various devices to make sure it works as expected, on mobile at the first test the play again button was to close to other buttons and it wasn't easy for the user to spot. I added more margin and also give a different color.
 
 * **Result**  
 Play again button works as planned across various devices and browsers.
@@ -292,13 +292,13 @@ The test has passed all the criteria and works like planned.
 #### User story: As a user, I want to be able to save my score.
 
 * **Plan** 
-Once the game is over user will see end game message with a personalised message depending on the final score that the user got. After the score results I want the user to be able to see 'save your score' message with an input and underneath then input, a Save button.
+Once the game is over user will see end game message with a personalized message depending on the final score that the user got. After the score results I want the user to be able to see 'save your score' message with an input and underneath then input, a Save button.
 
 * **Implementation**
-Displayed a button 'Save' with the input where user can type is name, the button is disabled until user start to type in, this is achieved adding 'keyup' enent in Javascript. In app.js I then added push object to array in order to store more than one user score and sort method to show scores from highest to lowest. I used localStorage setItem method to  update that key's value.
+Displayed a button 'Save' with the input where user can type is name, the button is disabled until user start to type in, this is achieved adding 'keyup' event in Javascript. In app.js I then added push object to array in order to store more than one user score and sort method to show scores from highest to lowest. I used localStorage setItem method to  update that key's value.
 
 * **Test**  
-I have tested on various devices to make sure it works as expected, I discovered that the score number was dispalyed as null value, I realized that I didn't pass correct properties to the score object, to fix it I passed mostRecentScore to it.
+I have tested on various devices to make sure it works as expected, I discovered that the score number was displayed as null value, I realized that I didn't pass correct properties to the score object, to fix it I passed mostRecentScore to it.
 
 * **Result**  
 Save score button works as planned across various devices and browsers.
@@ -320,7 +320,7 @@ Timer countdown doesn't restart
 When you click on answer it shows feedback and go to the next question, the timer doesn't restart at 15 but continue the countdown left at the previous question.
 
 * **Fix**   
-At the end of the conditional statment inside validateUserAnswer I had to pass clearInterval(counter) and the startTime() function in order to reset timer for each question.
+At the end of the conditional statement inside validateUserAnswer I had to pass clearInterval(counter) and the startTime() function in order to reset timer for each question.
 
 * **Verdict**  
 When answer a question getnextquestion is activated and timer restart at 15 seconds as planned. Bug resolved. 
@@ -361,7 +361,7 @@ Steps:
 
 * Navigate to the repository on GitHub and click **Settings**.
 * Go to the **Source section** within the GitHub Pages section.
-* On the dropdown menu select **master branch** and click save.
+* On the drop down menu select **master branch** and click save.
 * Now your website is live on:
 
 ```
@@ -386,7 +386,7 @@ https://yourgithubusername.github.io/your-repo-name
 
 * For this project I got inspired from the youtube channel [CodingNepal](https://www.youtube.com/channel/UCk7xIEmd3MeyhIu2StLX5yA), this video helped me to get start with the project.
 
-* Special thanks to my mentor [Simen Daehlin](https://github.com/Eventyret) , I would like to thank Simen for helping me getting start with this project and for guiding me into becomming a better developer.
+* Special thanks to my mentor [Simen Daehlin](https://github.com/Eventyret) , I would like to thank Simen for helping me getting start with this project and for guiding me into becoming a better developer.
 
 * For the particle.js used in the saving score part, I have to thank [Louis Hoebregets](https://css-tricks.com/playing-with-particles-using-the-web-animations-api/).
 
