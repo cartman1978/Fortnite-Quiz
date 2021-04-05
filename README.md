@@ -363,3 +363,23 @@ Steps:
 * Go to the **Source section** within the GitHub Pages section.
 * On the dropdown menu select **master branch** and click save.
 * Now your website is live on:
+
+```
+https://yourgithubusername.github.io/your-repo-name
+```
+* When you commit pushes are sent to GitHub and the GitHub page should update shortly after with total commits.
+
+### **To run the project locally:**
+ 
+1. From the application's repository, click the **code** button and download the zip of the repository. 
+1. Alternatively you can clone the repository  Using the **Clone with HTTPS option**, copy the link displayed.
+1. Open your IDE, and ensure the Git Terminal is open.
+1. Change the working directory to the location where the cloned directory is to go.
+1. Use the **"git clone" command** and paste the url copied in the second step.
+
+
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+## **Credits**
