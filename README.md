@@ -305,3 +305,22 @@ Save score button works as planned across various devices and browsers.
 
 * **Verdict**  
 The test has passed all the criteria and works like planned.
+
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+## **Bugs**
+---
+<a></a>
+
+Timer countdown doesn't restart
+
+* **Bug**  
+When you click on answer it shows feedback and go to the next question, the timer doesn't restart at 15 but continue the countdown left at the previous question.
+
+* **Fix**   
+At the end of the conditional statment inside validateUserAnswer I had to pass clearInterval(counter) and the startTime() function in order to reset timer for each question.
+
+* **Verdict**  
+When answer a question getnextquestion is activated and timer restart at 15 seconds as planned. Bug resolved. 
