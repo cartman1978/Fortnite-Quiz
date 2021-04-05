@@ -383,3 +383,7 @@ https://yourgithubusername.github.io/your-repo-name
 <a></a>
 
 ## **Credits**
+
+* For this project I got inspired from the youtube channel [CodingNepal](https://www.youtube.com/channel/UCk7xIEmd3MeyhIu2StLX5yA), this video helped me to get start with the project.
+
+* Special thanks to my mentor Simen Daehlin [https://github.com/Eventyret] , I would like to thank Simen for helping me getting start with this project and for guiding me into becomming a better developer.
