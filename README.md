@@ -1,5 +1,7 @@
 # Video Game Quizzes
 
+![Mokeup image](wireframes/mokeup.jpg)
+
 ## **Goal for this project** 
 
 Welcome to Video Game Quizzes !
