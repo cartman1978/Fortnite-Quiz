@@ -81,20 +81,8 @@ body {
     margin-top: 15rem;
 }
 
-#quit {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--telemagenta);
-    padding: 2rem 2rem;
-    outline: none;
-    border: none;
-    border-radius: 1rem;
-    background: var(--white);
-    cursor: pointer;
-    text-decoration: none;
-}
 
-#playGame, #rules {
+#playGame, #rules, #quit {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--telemagenta);
@@ -122,6 +110,7 @@ body {
 
 .infoList {
     height: 30rem;
+    padding: 1.5rem;
 }
 
 .infoContainer .infoTitle {
@@ -131,7 +120,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 2.5rem;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 
@@ -154,7 +143,8 @@ body {
     border-top: 1px solid var(--telemagenta);
 }
 
-.infoContainer #quit {
+.infoContainer #quit,
+.infoContainer #start {
     margin: 0 0.2rem;
     height: 3rem;
     outline: none;
@@ -167,17 +157,9 @@ body {
     transition: all 0.3s ease;
 }
 
+
 .infoContainer #start {
-    margin: 0 0.2rem;
     height: 4rem;
-    outline: none;
-    border: 1px solid var(--indianred);
-    border-radius: 1rem;
-    color: var(--indianred);
-    font-size: 1.2rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
     text-decoration: none;
 }
 
@@ -264,7 +246,7 @@ header .title {
     background: var(--indianred);
     padding: 3rem 2rem;
     box-shadow: 0px 3px 5px 1px var(--eminence);
-    /* pointer-events: none; */
+    
 }
 
 .option_list {
