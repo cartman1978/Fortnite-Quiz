@@ -419,7 +419,7 @@ input {
     color: var(--eminence);
 }
 
-#saveScoreBtn {
+#saveScoreBtn, #show-leaderboard {
     margin-top: 2rem;
     background: var(--white);
     color: var(--telemagenta);
@@ -430,20 +430,6 @@ input {
     cursor: pointer;
     text-decoration: none;
     width: 13rem;
-    border: none;
-    outline: none;
-}
-
-#show-leaderboard {
-    margin-top: 2rem;
-    background: var(--white);
-    color: var(--telemagenta);
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 2rem 1.5rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    text-decoration: none;
     border: none;
     outline: none;
 }
