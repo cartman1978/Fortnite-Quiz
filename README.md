@@ -387,3 +387,8 @@ https://yourgithubusername.github.io/your-repo-name
 * For this project I got inspired from the youtube channel [CodingNepal](https://www.youtube.com/channel/UCk7xIEmd3MeyhIu2StLX5yA), this video helped me to get start with the project.
 
 * Special thanks to my mentor [Simen Daehlin](https://github.com/Eventyret) , I would like to thank Simen for helping me getting start with this project and for guiding me into becomming a better developer.
+
+* For the particle.js used in the saving score part, I have to thank [Louis Hoebregets](https://css-tricks.com/playing-with-particles-using-the-web-animations-api/).
+
+
+[Back to Top](#table-of-contents)
