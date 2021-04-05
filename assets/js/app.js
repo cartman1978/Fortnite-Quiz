@@ -68,6 +68,7 @@ continueBtn.addEventListener('click', () => {
 //  If Play Quiz button is clicked, show 
 playGame.addEventListener('click', () => {
     quizBoxRef.classList.remove('hidden');
+    btnContainer.classList.add('hidden');
     startGame();
 });
 
