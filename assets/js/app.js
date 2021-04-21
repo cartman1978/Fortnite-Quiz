@@ -223,7 +223,7 @@ const scoreUp = num => {
 // Function to call when there are no question left
 // Diplay message depending on the score get by the user
 
-endGame = () => {
+const endGame = () => {
     const totalScore = maxQuestions * bonusCorrectAnswer;
     gameSec.classList.add('hidden');
     endBoxRef.classList.remove('hidden');
