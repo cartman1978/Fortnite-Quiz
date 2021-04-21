@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;700&display=swap');
-
 :root {
     --white: #fff;
     --telemagenta: #D12D6F;
@@ -71,7 +70,6 @@ body {
     transition: all 0.3s ease;
 }
 
-
 .hidden {
     display: none;
 }
@@ -80,7 +78,6 @@ body {
     text-align: center;
     margin-top: 15rem;
 }
-
 
 #playGame, #rules, #quit {
     font-size: 1.5rem;
@@ -143,8 +140,7 @@ body {
     border-top: 1px solid var(--telemagenta);
 }
 
-.infoContainer #quit,
-.infoContainer #start {
+.infoContainer #quit, .infoContainer #start {
     margin: 0 0.2rem;
     height: 3rem;
     outline: none;
@@ -156,7 +152,6 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 
 .infoContainer #start {
     height: 4rem;
@@ -207,7 +202,6 @@ header .title {
     border: 1px solid var(--eminence);
     border-radius: 1rem;
     padding: 0 8px;
-    
 }
 
 .quizBox header .timer .timeText {
@@ -246,7 +240,6 @@ header .title {
     background: var(--indianred);
     padding: 3rem 2rem;
     box-shadow: 0px 3px 5px 1px var(--eminence);
-    
 }
 
 .option_list {
@@ -266,7 +259,7 @@ header .title {
     transition: all 0.3s ease;
 }
 
- .correct {
+.correct {
     background: rgb(195, 236, 133);
     color: #000;
     border-radius: 1rem;
@@ -284,7 +277,6 @@ header .title {
     margin-left: -0.1rem;
     height: 5.8rem;
 }
-
 
 .choices {
     padding: 1.2rem;
@@ -354,31 +346,31 @@ header .title {
 
 /* End Box Container */
 
- #endBox, #leader-board {
+#endBox, #leader-board {
     background: var(--telemagenta);
     width: 35rem;
     height: 56rem;
     border-radius: 1rem;
     transform: translate(-50%, -50%) scale(0.9);
     box-shadow: 0px 3px 5px 1px var(--eminence);
- }
+}
 
- .endMessage {
-     color: var(--white);
-     margin-top: 5rem;
-     text-align: center;
-     font-size: 1.5rem;
- }
+.endMessage {
+    color: var(--white);
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
 
- #totalScore {
-     color: var(--white);
-     margin-top: 3rem;
-     font-size: 1.8rem;
-     margin-bottom: 8rem;
-     padding: 1rem;
- }
+#totalScore {
+    color: var(--white);
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    margin-bottom: 8rem;
+    padding: 1rem;
+}
 
- #play-again, #exit, #exitLeader {
+#play-again, #exit, #exitLeader {
     background: var(--eminence);
     color: var(--white);
     font-size: 1.5rem;
@@ -387,22 +379,22 @@ header .title {
     border-radius: 1rem;
     cursor: pointer;
     text-decoration: none;
- }
+}
 
- #finalScore {
-     color: rgb(195, 236, 133);
-     font-size: 1.9rem;
-     font-weight: 700;
- }
+#finalScore {
+    color: rgb(195, 236, 133);
+    font-size: 1.9rem;
+    font-weight: 700;
+}
 
- .buttonsEnd {
-     margin-top: 4rem;
-     display: flex;
-     justify-content: space-between;
-     padding: 1rem;
- }
+.buttonsEnd {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
 
- form {
+form {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -433,7 +425,6 @@ input {
     border: none;
     outline: none;
 }
-
 
 #saveScore, #scoreSaved {
     color: var(--eminence);
@@ -469,58 +460,52 @@ input {
     margin: auto;
 }
 
-
 particle {
-  position: fixed;
-  left: 0;
-  top: 0;
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
 }
 
-
 /* Media queries mobile */
+
 @media screen and (max-width: 460px) {
-     
     .start_btn, .infoContainer, .quizBox, #endBox, #leader-board {
         top: 50%;
     }
     .quizBox {
         width: 330px;
     }
-
     .quizBox header .timer {
         margin-right: -2rem;
         margin-top: -5rem;
     }
-
     #question {
         font-size: 1.5rem;
         margin-top: -2rem;
     }
-
     header .title {
-    font-size: 1.5rem;
-    margin-top: -5rem;
-}
-
-.option_list {
-    margin: 0.2rem 0;
-}
- .score_box {
-     font-size: 1rem;
- }
- .score_text {
-     width: 10rem;
- }
-
- .quizBox header .timeLine {
-     top: 6.5rem;
- }
+        font-size: 1.5rem;
+        margin-top: -5rem;
+    }
+    .option_list {
+        margin: 0.2rem 0;
+    }
+    .score_box {
+        font-size: 1rem;
+    }
+    .score_text {
+        width: 10rem;
+    }
+    .quizBox header .timeLine {
+        top: 6.5rem;
+    }
 }
 
 /* Media queries for Tablet */
+
 @media screen and (min-width: 768px) {
     .start_btn, .infoContainer, .quizBox, #endBox, #leader-board {
         top: 52%;
@@ -531,12 +516,10 @@ particle {
 }
 
 @media screen and (min-width: 1280px) {
-   #main-title {
-       margin-top: -13rem;
-   }
-   .start_btn, .infoContainer, .quizBox, #endBox, #leader-board {
+    #main-title {
+        margin-top: -13rem;
+    }
+    .start_btn, .infoContainer, .quizBox, #endBox, #leader-board {
         top: 43%;
     }
 }
-
-

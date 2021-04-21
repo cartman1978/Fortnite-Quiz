@@ -78,10 +78,10 @@ let questions = [];
 // Fetching data from Trivia Api
 const fetchData = (url) => {
     return fetch(url).then(res => res.json())
-    .catch(error => {
-        errorText.innerHTML = `Arrr! It seems that your not lucky. Please try to refresh the page.`;
-        console.log(error);
-    });
+        .catch(error => {
+            errorText.innerHTML = `Arrr! It seems that your not lucky. Please try to refresh the page.`;
+            console.log(error);
+        });
 }
 
 
@@ -89,19 +89,19 @@ const fetchData = (url) => {
 /**
  * Function to get questions from API and passes to the DOM
  */
- const fetchQuestions = fetchData('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple');
+const fetchQuestions = fetchData('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple');
 
 
 
 fetchQuestions.then((data) => {
     questions = data.results.map(fetchQuestions => {
         const questionFormatted = {
-            question : fetchQuestions.question,
+            question: fetchQuestions.question,
         };
 
         questionFormatted.answer = Math.floor(Math.random() * 3) + 1;
-        const answerChoices = [ ... fetchQuestions.incorrect_answers];
-        answerChoices.splice(questionFormatted.answer -1, 0, fetchQuestions.correct_answer);
+        const answerChoices = [...fetchQuestions.incorrect_answers];
+        answerChoices.splice(questionFormatted.answer - 1, 0, fetchQuestions.correct_answer);
 
         answerChoices.forEach((choice, index) => {
             questionFormatted['choice' + (index + 1)] = choice;
@@ -148,7 +148,7 @@ getNextQuestion = () => {
         progressFull.style.width = `${(questionCounter / maxQuestions) * 100 - 10}%`;
         currentQuestion = availableQuestions[questionIndex];
         question.innerHTML = currentQuestion.question;
-         
+
 
         choices.forEach(choice => {
             const number = choice.dataset.number;
@@ -160,7 +160,7 @@ getNextQuestion = () => {
         availableQuestions.splice(questionIndex, 1);
         gettingAnswer = true;
         validateUserAnswer();
-      
+
     }
 };
 
@@ -187,7 +187,7 @@ const validateUserAnswer = () => {
                 scoreUp(bonusCorrectAnswer);
                 setTimeout(() => {
                     choiceSelected.classList.remove('correct');
-                     clearInterval(counter);
+                    clearInterval(counter);
                     clearInterval(counterLine);
                     startTime(15);
                     getNextQuestion();
@@ -202,7 +202,7 @@ const validateUserAnswer = () => {
                 setTimeout(() => {
                     choiceSelected.classList.remove('incorrect');
                     correctAnswer.classList.remove('correct');
-               
+
                     clearInterval(counter);
                     clearInterval(counterLine);
                     startTime(15);
@@ -231,7 +231,7 @@ endGame = () => {
     endBoxRef.classList.remove('hidden');
     btnContainer.classList.add('hidden');
     finalScore.innerText = score + " / " + totalScore;
-     
+
 
     if (score === (maxQuestions * bonusCorrectAnswer)) {
         endMessage.innerText = "Wow this is what I call perfection!";
@@ -253,27 +253,28 @@ playAgain.addEventListener('click', () => {
     endBoxRef.classList.add('hidden');
     btnContainer.classList.remove('hidden');
     location.reload();
-  
+
 });
 
 // When game is finish end box is displayed
 // If exit button is clicked, return to home page
 
 exitBtn.addEventListener('click', () => {
-  endBoxRef.style.display = 'none';
-  btnContainer.style.display = 'block';
+    endBoxRef.style.display = 'none';
+    btnContainer.style.display = 'block';
+    location.reload();
 });
 
 // If LeaderBoard button is clicked, show leaderboard box
 leaderBtn.addEventListener('click', () => {
-     leaderBox.classList.remove('hidden');
-     startGame();
+    leaderBox.classList.remove('hidden');
+    startGame();
 });
 
 // Once in the Leaderboard box, if user click exit
 // close Leaderboard box
 exitLeaderBox.addEventListener('click', () => {
-     leaderBox.classList.add('hidden');
+    leaderBox.classList.add('hidden');
 });
 
 // Save Score function
@@ -281,14 +282,14 @@ exitLeaderBox.addEventListener('click', () => {
 finalScore.innerText = mostRecentScore;
 
 username.addEventListener('keyup', () => {
-   console.log(username.value);
-   saveScoreBtn.disabled = !username.value;
+    console.log(username.value);
+    saveScoreBtn.disabled = !username.value;
 });
 
 
 // Function to save user score
 saveScoreBtn.addEventListener('click', (e) => {
-     console.log('score saved');
+    console.log('score saved');
     e.preventDefault();
 
     const score = {
@@ -298,7 +299,7 @@ saveScoreBtn.addEventListener('click', (e) => {
     // store more than one user score
     userScore.push(score);
     // function to sort score from highst to lowest
-    userScore.sort((a,b) => b.score - a.score);
+    userScore.sort((a, b) => b.score - a.score);
     // number of high score we want to store
     userScore.splice(5);
     // Save user scores in localstorage
@@ -309,44 +310,44 @@ saveScoreBtn.addEventListener('click', (e) => {
     scoreSaved.classList.remove('hidden');
     saveScore.classList.add('hidden');
 })
-    
+
 
 
 // Load and dispaly User High score from local storage
-scoreList.innerHTML = 
-userScore.map(score => {
-   return `<li class = "user-score">${score.name} - ${score.score}</li>`;
-}).join("");
+scoreList.innerHTML =
+    userScore.map(score => {
+        return `<li class = "user-score">${score.name} - ${score.score}</li>`;
+    }).join("");
 
 // clear input after submit
- saveScoreBtn.addEventListener('click', () => {
-      document.getElementById('username').value = '';
-    });
+saveScoreBtn.addEventListener('click', () => {
+    document.getElementById('username').value = '';
+});
 
 // Function to start time counter
 function startTime(time) {
-   counter = setInterval(timer, 1000);
-       function timer() {
-         timeCount.textContent = time;
-         time --;
-         if (time < 9) {
-             let addZero = timeCount.textContent;
-             timeCount.textContent = "0" + addZero;
-         }
-         if (time < 0) {
-             clearInterval(counter);
-             timeCount.textContent = "00";
-             timeOff.textContent = "Time Off";
-            
+    counter = setInterval(timer, 1000);
+    function timer() {
+        timeCount.textContent = time;
+        time--;
+        if (time < 9) {
+            let addZero = timeCount.textContent;
+            timeCount.textContent = "0" + addZero;
+        }
+        if (time < 0) {
+            clearInterval(counter);
+            timeCount.textContent = "00";
+            timeOff.textContent = "Time Off";
+
             let theAnswer = currentQuestion.answer;
             let answerToShow = document.querySelector(`[data-number="${theAnswer}"]`);
-             clearInterval(counter);
-             startTime(15);
-             getNextQuestion();
-        
-         }
-       }
-   
+            clearInterval(counter);
+            startTime(15);
+            getNextQuestion();
+
+        }
+    }
+
 };
 
 

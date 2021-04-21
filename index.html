@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Video Game Quizzes</title>
     <meta name="Description" content="Video Game Quizzes">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
@@ -71,30 +71,30 @@
 
 
         <h2 id="question"></h2>
-        
-                <div class="container">
-                <div class="option_list">
-                    <p class="choices" data-number="1"></p>
-                </div>
-                <div class="option_list">
-                    <p class="choices" data-number="2"></p>
-                </div>
-                <div class="option_list">
-                    <p class="choices" data-number="3"></p>
-                </div>
-                <div class="option_list">
-                    <p class="choices" data-number="4"></p>
-                </div>
-               </div>
 
-       
+        <div class="container">
+            <div class="option_list">
+                <p class="choices" data-number="1"></p>
+            </div>
+            <div class="option_list">
+                <p class="choices" data-number="2"></p>
+            </div>
+            <div class="option_list">
+                <p class="choices" data-number="3"></p>
+            </div>
+            <div class="option_list">
+                <p class="choices" data-number="4"></p>
+            </div>
+        </div>
+
+
         <!-- Question Counter -->
 
         <div class="question_count">
             <h4 class="questionTitle"> Question </h4>
-           
+
             <div id="progressBar">
-                 
+
                 <div id="progressFull">
                     <p id="progressText" class="questionText"></p>
                 </div>
@@ -114,39 +114,34 @@
     <div id="endBox" class="end_box hidden">
         <p class="endMessage"></p>
         <p id="totalScore">Your Score is: <span id="finalScore"></span></p>
-         <p id="saveScore">Save your score</p>
-         <p id="scoreSaved" class="hidden">Score saved 👍</p>
-           <form>
-               <input type="text" name="username" id="username" placeholder="username">
-               <button 
-                  type="submit" 
-                  class="buttons" 
-                  id="saveScoreBtn"
-                  
-                  disabled>
-                  Save
-                </button>
-                 <a href="#leader-board" id="show-leaderboard" class="buttons" aria-label="LeaderBoard">LeaderBoard</a>
-           </form>
+        <p id="saveScore">Save your score</p>
+        <p id="scoreSaved" class="hidden">Score saved 👍</p>
+        <form>
+            <input type="text" name="username" id="username" placeholder="username">
+            <button type="submit" class="buttons" id="saveScoreBtn" disabled>
+                Save
+            </button>
+            <a href="#leader-board" id="show-leaderboard" class="buttons" aria-label="LeaderBoard">LeaderBoard</a>
+        </form>
         <div class="buttonsEnd">
             <a href="#game-section" id="play-again" class="buttons" aria-label="play-again">Play again</a>
-        <a href="#" id="exit" class="buttons" aria-label="exit">Exit</a>
+            <a href="#" id="exit" class="buttons" aria-label="exit">Exit</a>
         </div>
     </div>
 
-     <!-- LeaderBoard Score -->
+    <!-- LeaderBoard Score -->
     <div class="leaderboard hidden" id="leader-board">
         <h1 class="text-center" id="score-title">Top Scores</h1>
         <ul id="scoreList"></ul>
-         <a href="#game-section" id="exitLeader" class="buttons" aria-label="exit">Exit</a>
+        <a href="#game-section" id="exitLeader" class="buttons" aria-label="exit">Exit</a>
     </div>
-    
-   
+
+
 
 
     <script src="assets/js/app.js"></script>
     <script src="assets/js/particle.js"></script>
-    
+
 </body>
 
 </html>
