@@ -1,4 +1,4 @@
-if(document.body.animate) {
+if (document.body.animate) {
     document.querySelector('#saveScoreBtn').addEventListener('click', pop);
 }
 
@@ -56,11 +56,11 @@ function createParticle(x, y) {
             opacity: 0
         }
     ], {
-            // Set random duration from 500 to 1500ms
-            duration: Math.random() * 1000 + 500,
-            easing: 'cubic-bezier(0, .9, .57, 1)',
-            // Deley particle with random value of 200ms
-            delay: Math.random() * 200
+        // Set random duration from 500 to 1500ms
+        duration: Math.random() * 1000 + 500,
+        easing: 'cubic-bezier(0, .9, .57, 1)',
+        // Deley particle with random value of 200ms
+        delay: Math.random() * 200
     });
 
     // Remove the element from the DOM when animatios in complete
