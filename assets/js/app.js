@@ -38,7 +38,6 @@ const mostRecentScore = localStorage.getItem('mostRecentScore');
 const scoreList = document.querySelector('#scoreList');
 const userScore = JSON.parse(localStorage.getItem("userScore")) || [];
 
-console.log(userScore);
 
 let currentQuestion = {};
 let questionCounter = 0;
@@ -107,7 +106,7 @@ fetchQuestions.then((data) => {
             questionFormatted['choice' + (index + 1)] = choice;
         });
         return questionFormatted;
-        console.log(questionFormatted)
+
     });
     startGame();
 }).catch(error => {
@@ -118,12 +117,11 @@ fetchQuestions.then((data) => {
 
 
 // Function to start the game
-startGame = () => {
+const startGame = () => {
     questionCounter = 0;
     score = 0;
     scoreInfo.innerText = score;
     availableQuestions = [...questions];
-    console.log(availableQuestions);
     clearInterval(counter);
     startTime(timeValue);
     clearInterval(counterLine);
