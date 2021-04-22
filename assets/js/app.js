@@ -89,7 +89,7 @@ fetchQuestions.then((data) => {
     startGame();
 }).catch(error => {
     errorText.innerHTML = `Arrr! It seems that your not lucky. Please try to refresh the page.`;
-    console.log(error);
+
 });
 
 
@@ -282,14 +282,12 @@ exitLeaderBox.addEventListener('click', () => {
 finalScore.innerText = mostRecentScore;
 
 username.addEventListener('keyup', () => {
-    console.log(username.value);
     saveScoreBtn.disabled = !username.value;
 });
 
 
 // Function to save user score
 saveScoreBtn.addEventListener('click', (e) => {
-    console.log('score saved');
     e.preventDefault();
 
     const score = {
