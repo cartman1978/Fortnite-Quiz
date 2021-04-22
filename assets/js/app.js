@@ -69,6 +69,7 @@ playGame.addEventListener('click', () => {
     quizBoxRef.classList.remove('hidden');
     btnContainer.classList.add('hidden');
     startGame();
+    startTime(timeValue);
 });
 
 
@@ -123,10 +124,10 @@ const startGame = () => {
     scoreInfo.innerText = score;
     availableQuestions = [...questions];
     clearInterval(counter);
-    startTime(timeValue);
     clearInterval(counterLine);
     getNextQuestion();
     timeOff.textContent = "Time Left";
+
 }
 
 
@@ -242,6 +243,8 @@ const endGame = () => {
     } else {
         endMessage.innerText = "Ohh... you need a refresh!";
     }
+
+
 };
 
 // When game is finish end box is displayed
