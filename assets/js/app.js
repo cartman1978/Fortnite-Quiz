@@ -23,7 +23,6 @@ const progressText = document.querySelector('#progressText');
 const gameSec = document.querySelector('#game-section');
 const scoreSaved = document.querySelector('#scoreSaved');
 const saveScore = document.querySelector('#saveScore');
-
 const btnContainer = document.querySelector('.btnContainer');
 const rulesContainerRef = document.querySelector('#rules');
 const playGame = document.querySelector('#playGame');
@@ -52,26 +51,6 @@ let timeValue = 15;
 let widthValue = 0;
 let queNum = 1;
 
-// If Quiz rule button is clicked
-rulesContainerRef.addEventListener('click', () => {
-    btnContainer.classList.add('hidden');
-    infoContainerRef.style.display = "inline-block";
-});
-
-//If Continue OK is clicked, remove info box and diplay buttons again
-continueBtn.addEventListener('click', () => {
-    infoContainerRef.style.display = "none";
-    btnContainer.classList.remove('hidden');
-});
-
-//  If Play Quiz button is clicked, show 
-playGame.addEventListener('click', () => {
-    quizBoxRef.classList.remove('hidden');
-    btnContainer.classList.add('hidden');
-    startGame();
-    startTime(timeValue);
-});
-
 
 let questions = [];
 
@@ -82,7 +61,6 @@ const fetchData = (url) => {
             errorText.innerHTML = `Arrr! It seems that your not lucky. Please try to refresh the page.`;
         });
 }
-
 
 
 /**
@@ -115,6 +93,26 @@ fetchQuestions.then((data) => {
 });
 
 
+// If Quiz rule button is clicked
+rulesContainerRef.addEventListener('click', () => {
+    btnContainer.classList.add('hidden');
+    infoContainerRef.style.display = "inline-block";
+});
+
+//If Continue OK is clicked, remove info box and diplay buttons again
+continueBtn.addEventListener('click', () => {
+    infoContainerRef.style.display = "none";
+    btnContainer.classList.remove('hidden');
+});
+
+//  If Play Quiz button is clicked, show 
+playGame.addEventListener('click', () => {
+    quizBoxRef.classList.remove('hidden');
+    btnContainer.classList.add('hidden');
+    startGame();
+    startTime(timeValue);
+});
+
 
 /**
  * Function to start the game
@@ -133,7 +131,7 @@ const startGame = () => {
 
 
 // Function to get new questions 
-getNextQuestion = () => {
+const getNextQuestion = () => {
     if (availableQuestions.length === 0) {
         // save user score
         localStorage.setItem("mostRecentScore", score);
