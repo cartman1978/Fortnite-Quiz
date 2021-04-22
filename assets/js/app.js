@@ -80,7 +80,6 @@ const fetchData = (url) => {
     return fetch(url).then(res => res.json())
         .catch(error => {
             errorText.innerHTML = `Arrr! It seems that your not lucky. Please try to refresh the page.`;
-            console.log(error);
         });
 }
 
@@ -117,7 +116,9 @@ fetchQuestions.then((data) => {
 
 
 
-// Function to start the game
+/**
+ * Function to start the game
+ */
 const startGame = () => {
     questionCounter = 0;
     score = 0;
