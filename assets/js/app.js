@@ -1,5 +1,3 @@
-// getting all the elements
-
 
 const infoContainerRef = document.querySelector('#info-container');
 const startButton = document.querySelector('#startButton');
@@ -54,10 +52,14 @@ let queNum = 1;
 
 let questions = [];
 
-// Fetching data from Trivia Api
+/**
+ * Fetching data from Trivia Api
+ * @param {string} url Api Url for questions
+ * @returns List of questions
+ */
 const fetchData = (url) => {
-    return fetch(url).then(res => res.json())
-        .catch(error => {
+    return fetch(url).then((res) => res.json())
+        .catch((error) => {
             errorText.innerHTML = `Arrr! It seems that your not lucky. Please try to refresh the page.`;
         });
 }
@@ -220,8 +222,10 @@ const scoreUp = num => {
     scoreInfo.innerText = score;
 }
 
-// Function to call when there are no question left
-// Diplay message depending on the score get by the user
+/**
+ * Function to call when there are no question left
+ *  Diplay message depending on the score get by the user
+ */
 
 const endGame = () => {
     const totalScore = maxQuestions * bonusCorrectAnswer;
@@ -246,8 +250,10 @@ const endGame = () => {
 
 };
 
-// When game is finish end box is displayed
-// If Play again button is clicked, show game_box and restart the game
+/**
+ * When game is finish end box is displayed
+ * If Play again button is clicked, show game_box and restart the game
+ */
 
 playAgain.addEventListener('click', () => {
     endBoxRef.classList.add('hidden');
@@ -256,8 +262,10 @@ playAgain.addEventListener('click', () => {
 
 });
 
-// When game is finish end box is displayed
-// If exit button is clicked, return to home page
+/**
+ *  When game is finish end box is displayed
+ * If exit button is clicked, return to home page
+ */
 
 exitBtn.addEventListener('click', () => {
     endBoxRef.style.display = 'none';
@@ -271,8 +279,10 @@ leaderBtn.addEventListener('click', () => {
     startGame();
 });
 
-// Once in the Leaderboard box, if user click exit
-// close Leaderboard box
+/**
+ * Once in the Leaderboard box, if user click exit
+ * close Leaderboard box
+ */
 exitLeaderBox.addEventListener('click', () => {
     leaderBox.classList.add('hidden');
 });
@@ -294,13 +304,10 @@ saveScoreBtn.addEventListener('click', (e) => {
         score: mostRecentScore,
         name: username.value
     };
-    // store more than one user score
+
     userScore.push(score);
-    // function to sort score from highst to lowest
     userScore.sort((a, b) => b.score - a.score);
-    // number of high score we want to store
     userScore.splice(5);
-    // Save user scores in localstorage
     localStorage.setItem('userScore', JSON.stringify(userScore));
 
     saveScoreBtn.classList.add('hidden');
@@ -310,8 +317,6 @@ saveScoreBtn.addEventListener('click', (e) => {
 })
 
 
-
-// Load and dispaly User High score from local storage
 scoreList.innerHTML =
     userScore.map(score => {
         return `<li class = "user-score">${score.name} - ${score.score}</li>`;
@@ -322,7 +327,10 @@ saveScoreBtn.addEventListener('click', () => {
     document.getElementById('username').value = '';
 });
 
-// Function to start time counter
+/**
+ * Starts the time counter
+ * @param time amount of seconds 
+ */
 function startTime(time) {
     counter = setInterval(timer, 1000);
     function timer() {
