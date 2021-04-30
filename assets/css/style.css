@@ -22,7 +22,81 @@ html {
 body {
     height: 100vh;
     width: 100%;
+    font-size: 1.6rem;
     overflow: auto;
+}
+
+header {
+    height: 70px;
+    padding: 0 30px;
+    background: var(--indianred);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    height: 5rem;
+    width: 70%;
+    border-radius: 1rem;
+    border: none;
+    padding: 1rem;
+    font-size: 2rem;
+    color: var(--eminence);
+}
+
+.quizBox header .timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15rem;
+    height: 4.5rem;
+    background: var(--telemagenta);
+    border: 1px solid var(--eminence);
+    border-radius: 1rem;
+    padding: 0 8px;
+}
+
+.quizBox header .timer .timeText {
+    font-weight: 400;
+    font-size: 1rem;
+    user-select: none;
+}
+
+.quizBox header .timer .timerSec {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--eminence);
+    height: 2.8rem;
+    width: 3.9rem;
+    color: var(--white);
+    text-align: center;
+    line-height: 2.2rem;
+    border-radius: 1rem;
+    user-select: none;
+}
+
+.quizBox header .timeLine {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    height: 0.3rem;
+    width: 100%;
+    background: var(--eminence);
+    box-shadow: 0px 3px 5px 1px var(--eminence);
 }
 
 #bg-image {
@@ -153,11 +227,6 @@ body {
     transition: all 0.3s ease;
 }
 
-.infoContainer #start {
-    height: 4rem;
-    text-decoration: none;
-}
-
 .buttons #quit {
     color: var(--indianred);
 }
@@ -175,62 +244,6 @@ body {
 .buttons #quit:hover {
     color: var(--white);
     background: var(--telemagenta);
-}
-
-header {
-    height: 70px;
-    padding: 0 30px;
-    background: var(--indianred);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header .title {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.quizBox header .timer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 15rem;
-    height: 4.5rem;
-    background: var(--telemagenta);
-    border: 1px solid var(--eminence);
-    border-radius: 1rem;
-    padding: 0 8px;
-}
-
-.quizBox header .timer .timeText {
-    font-weight: 400;
-    font-size: 1rem;
-    user-select: none;
-}
-
-.quizBox header .timer .timerSec {
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: var(--eminence);
-    height: 2.8rem;
-    width: 3.9rem;
-    color: var(--white);
-    text-align: center;
-    line-height: 2.2rem;
-    border-radius: 1rem;
-    user-select: none;
-}
-
-.quizBox header .timeLine {
-    position: absolute;
-    top: 10rem;
-    left: 0;
-    height: 0.3rem;
-    width: 100%;
-    background: var(--eminence);
-    box-shadow: 0px 3px 5px 1px var(--eminence);
 }
 
 .quizBox {
@@ -392,23 +405,6 @@ header .title {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-}
-
-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input {
-    height: 5rem;
-    width: 70%;
-    border-radius: 1rem;
-    border: none;
-    padding: 1rem;
-    font-size: 2rem;
-    color: var(--eminence);
 }
 
 #saveScoreBtn, #show-leaderboard {
