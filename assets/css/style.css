@@ -268,7 +268,6 @@ input {
 }
 
 .option_list:hover {
-    background: var(--telemagenta);
     transition: all 0.3s ease;
 }
 
@@ -517,5 +516,8 @@ particle {
     }
     .start_btn, .infoContainer, .quizBox, #endBox, #leader-board {
         top: 43%;
+    }
+    .option_list:hover {
+        background: var(--telemagenta);
     }
 }
